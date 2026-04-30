@@ -45,7 +45,7 @@ export default function Navbar() {
             <div className="relative w-7 h-7 shrink-0">
               <div className="w-7 h-7 rounded-full overflow-hidden bg-white">
                 <Image
-                  src="/assets/images/logo.jpg"
+                  src="/assets/images/logobetter.jpg"
                   alt="Future Technologies logo"
                   width={28}
                   height={28}

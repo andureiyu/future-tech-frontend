@@ -35,7 +35,7 @@ export default function Footer() {
               <div className="relative w-9 h-9 shrink-0">
                 <div className="w-9 h-9 rounded-full overflow-hidden bg-white">
                   <Image
-                    src="/assets/images/logo.jpg"
+                    src="/assets/images/logobetter.jpg"
                     alt="Future Technologies logo"
                     width={36}
                     height={36}
