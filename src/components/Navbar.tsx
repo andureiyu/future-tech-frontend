@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { RiMenuLine, RiCloseLine } from "react-icons/ri";
@@ -39,7 +40,22 @@ export default function Navbar() {
         <div className="flex items-center justify-between py-5">
 
           {/* Brand — left */}
-          <Link href="/" className="shrink-0">
+          <Link href="/" className="shrink-0 flex items-center gap-2.5">
+            {/* Logo circle — white bg matches logo's own background */}
+            <div className="relative w-7 h-7 shrink-0">
+              <div className="w-7 h-7 rounded-full overflow-hidden bg-white">
+                <Image
+                  src="/assets/images/logobetter.jpg"
+                  alt="Future Technologies logo"
+                  width={28}
+                  height={28}
+                  className="object-contain w-full h-full"
+                  priority
+                />
+              </div>
+              {/* subtle ring overlay so it reads against both light and dark bg */}
+              <div className="absolute inset-0 rounded-full ring-1 ring-white/20 pointer-events-none" />
+            </div>
             <span
               className="text-white font-bold text-[15px] tracking-wide"
               style={{ fontFamily: "var(--font-nunito)" }}

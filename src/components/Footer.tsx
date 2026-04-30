@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   RiFacebookBoxFill,
   RiMapPinLine,
@@ -30,7 +31,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-5 w-fit">
+            <Link href="/" className="flex items-center gap-2.5 mb-5 w-fit">
+              <div className="relative w-9 h-9 shrink-0">
+                <div className="w-9 h-9 rounded-full overflow-hidden bg-white">
+                  <Image
+                    src="/assets/images/logobetter.jpg"
+                    alt="Future Technologies logo"
+                    width={36}
+                    height={36}
+                    className="object-contain w-full h-full"
+                  />
+                </div>
+                <div className="absolute inset-0 rounded-full ring-1 ring-white/15 pointer-events-none" />
+              </div>
               <span
                 className="text-white font-semibold text-sm"
                 style={{ fontFamily: "var(--font-nunito)" }}
