@@ -23,7 +23,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMobileOpen(false);
   }, [pathname]);
@@ -38,42 +37,47 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between py-5">
-          {/* Brand mark */}
-          <Link href="/" className="flex items-center gap-3 group">
+
+          {/* Brand — left */}
+          <Link href="/" className="shrink-0">
             <span
-              className="text-white font-semibold text-[14px] tracking-wide"
+              className="text-white font-bold text-[15px] tracking-wide"
               style={{ fontFamily: "var(--font-nunito)" }}
             >
-              Future Technologies
+              Future{" "}
+              <span className="text-accent">Technologies</span>
             </span>
           </Link>
 
-          {/* Desktop nav links */}
-          <div className="hidden md:flex items-center gap-7">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-[13px] font-medium tracking-wide transition-colors duration-200 relative group ${
-                  pathname === link.href
-                    ? "text-accent"
-                    : "text-white/60 hover:text-white"
-                }`}
-                style={{ fontFamily: "var(--font-inter)" }}
-              >
-                {link.label}
-                {pathname === link.href && (
-                  <span className="absolute -bottom-1 left-0 right-0 h-px bg-accent" />
-                )}
-              </Link>
-            ))}
+          {/* Nav links — right of brand, hidden on mobile */}
+          <div className="hidden md:flex items-center gap-1 ml-10">
+            {navLinks.map((link) => {
+              const active = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative px-3.5 py-2 text-[12.5px] font-medium rounded-[4px] transition-all duration-200 ${
+                    active
+                      ? "text-white bg-white/6"
+                      : "text-white/45 hover:text-white hover:bg-white/4"
+                  }`}
+                  style={{ fontFamily: "var(--font-inter)" }}
+                >
+                  {link.label}
+                  {active && (
+                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-3.5 h-px bg-accent rounded-full" />
+                  )}
+                </Link>
+              );
+            })}
           </div>
 
-          {/* CTA + mobile toggle */}
-          <div className="flex items-center gap-4">
+          {/* CTA + mobile toggle — far right */}
+          <div className="flex items-center gap-3 ml-auto md:ml-0">
             <Link
               href="/contact"
-              className="hidden md:inline-flex items-center px-5 py-2 bg-accent text-[#1a1a1a] text-[13px] font-bold rounded-[3px] hover:bg-accent-hover transition-colors duration-200"
+              className="hidden md:inline-flex items-center gap-1.5 px-4 py-2 bg-accent text-[#1a1a1a] text-[12px] font-bold rounded-[4px] hover:bg-accent-hover transition-colors duration-200 tracking-wide"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Get a Quote
@@ -81,25 +85,25 @@ export default function Navbar() {
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden text-white/80 hover:text-white p-1 transition-colors"
+              className="md:hidden text-white/70 hover:text-white p-1 transition-colors"
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
             >
-              {mobileOpen ? <RiCloseLine size={22} /> : <RiMenuLine size={22} />}
+              {mobileOpen ? <RiCloseLine size={21} /> : <RiMenuLine size={21} />}
             </button>
           </div>
         </div>
 
         {/* Mobile dropdown */}
         {mobileOpen && (
-          <div className="md:hidden border-t border-border-subtle/60 py-4 bg-bg-secondary">
+          <div className="md:hidden border-t border-border-subtle/50 py-3 bg-bg-secondary">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`block py-3 px-3 text-[13px] font-medium rounded-[3px] transition-colors mb-1 ${
+                className={`block py-2.5 px-3 text-[13px] font-medium rounded-[3px] transition-colors mb-0.5 ${
                   pathname === link.href
-                    ? "text-accent bg-bg-primary"
-                    : "text-white/60 hover:text-white hover:bg-bg-primary"
+                    ? "text-accent bg-white/5"
+                    : "text-white/55 hover:text-white hover:bg-white/4"
                 }`}
                 style={{ fontFamily: "var(--font-inter)" }}
               >

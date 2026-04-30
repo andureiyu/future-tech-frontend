@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { RiArrowRightLine, RiCheckLine } from "react-icons/ri";
 
@@ -24,42 +25,17 @@ export default function AboutTeaser() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <div className="relative aspect-4/3 rounded-lg overflow-hidden bg-[#323232] border border-[#ffffff]/5">
-              {/* Grid pattern */}
-              <svg
-                className="absolute inset-0 w-full h-full"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <defs>
-                  <pattern
-                    id="about-grid"
-                    width="40"
-                    height="40"
-                    patternUnits="userSpaceOnUse"
-                  >
-                    <path
-                      d="M 40 0 L 0 0 0 40"
-                      fill="none"
-                      stroke="rgba(255,255,255,0.04)"
-                      strokeWidth="1"
-                    />
-                  </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#about-grid)" />
-              </svg>
-
-              {/* Placeholder indicator */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                <div className="w-14 h-14 border border-[#ffffff]/8 rounded-lg flex items-center justify-center">
-                  <div className="w-6 h-6 bg-accent/12 rounded-[3px]" />
-                </div>
-                <span
-                  className="text-white/18 text-[10px] tracking-[0.25em] uppercase"
-                  style={{ fontFamily: "var(--font-inter)" }}
-                >
-                  Team / Store Photo
-                </span>
-              </div>
+            <div className="relative aspect-4/3 rounded-lg overflow-hidden border border-white/6">
+              <Image
+                src="/assets/images/teamphotos.jpg"
+                alt="Future Technologies team"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+              {/* Subtle dark gradient at bottom for depth */}
+              <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
             </div>
 
             {/* Offset decorative border */}
