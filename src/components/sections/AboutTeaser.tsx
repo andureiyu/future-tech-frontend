@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { RiArrowRightLine, RiCheckLine } from "react-icons/ri";
+import { SectionBadge } from "@/components/ui/section-badge";
 
 const highlights = [
   "Locally owned and operated in Tandag, Surigao del Sur",
@@ -50,13 +51,7 @@ export default function AboutTeaser() {
             transition={{ duration: 0.6, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-7 h-px bg-accent" />
-              <span
-                className="text-accent text-[11px] font-semibold tracking-[0.22em] uppercase"
-                style={{ fontFamily: "var(--font-inter)" }}
-              >
-                About Us
-              </span>
+              <SectionBadge>About Us</SectionBadge>
             </div>
 
             <h2

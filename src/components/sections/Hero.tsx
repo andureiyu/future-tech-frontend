@@ -2,7 +2,23 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { RiArrowRightLine, RiPhoneLine } from "react-icons/ri";
+import { RiArrowRightLine, RiPhoneLine, RiCheckboxCircleLine } from "react-icons/ri";
+import { SectionBadge } from "@/components/ui/section-badge";
+
+const statusItems = [
+  { label: "Network", status: "Online", pct: "100%", color: "bg-emerald-400" },
+  { label: "Security", status: "Protected", pct: "98%", color: "bg-emerald-400" },
+  { label: "Servers", status: "Active", pct: "100%", color: "bg-emerald-400" },
+  { label: "Backup", status: "Synced", pct: "94%", color: "bg-accent" },
+];
+
+const metrics = [
+  { value: "99.9%", label: "Uptime" },
+  { value: "<2ms", label: "Response" },
+  { value: "500+", label: "Clients" },
+];
+
+const techTags = ["Cisco", "HP", "Dell", "Hikvision", "TP-Link"];
 
 export default function Hero() {
   return (
@@ -29,15 +45,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
-          {/* Eyebrow */}
-          <div className="flex items-center gap-3 mb-7">
-            <div className="w-7 h-px bg-accent" />
-            <span
-              className="text-accent text-[11px] font-semibold tracking-[0.22em] uppercase"
-              style={{ fontFamily: "var(--font-inter)" }}
-            >
-              Tandag, Surigao del Sur
-            </span>
+          {/* Eyebrow — SectionBadge */}
+          <div className="mb-7">
+            <SectionBadge>Tandag, Surigao del Sur</SectionBadge>
           </div>
 
           <h1
@@ -92,96 +102,120 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Right: Hero visual placeholder */}
+        {/* Right: IT Dashboard mockup */}
         <motion.div
           initial={{ opacity: 0, x: 28 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.65, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
           className="hidden lg:block relative"
         >
-          <div className="relative w-full aspect-[4/3.2] rounded-lg overflow-hidden border border-[#ffffff]/6">
-            {/* Base */}
-            <div className="absolute inset-0 bg-[#323232]" />
+          <div className="relative w-full rounded-xl overflow-hidden border border-white/8 bg-[#242424] shadow-[0_24px_80px_rgba(0,0,0,0.4)]">
 
-            {/* Grid lines */}
-            <svg
-              className="absolute inset-0 w-full h-full"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <defs>
-                <pattern
-                  id="hero-grid"
-                  width="40"
-                  height="40"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M 40 0 L 0 0 0 40"
-                    fill="none"
-                    stroke="rgba(255,188,0,0.06)"
-                    strokeWidth="1"
-                  />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#hero-grid)" />
-            </svg>
-
-            {/* Placeholder label */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-16 h-16 border border-[#ffffff]/10 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <div className="w-7 h-7 bg-accent/15 rounded-[3px]" />
-                </div>
+            {/* Card header */}
+            <div className="flex items-center justify-between px-5 py-4 border-b border-white/6">
+              <div className="flex items-center gap-2.5">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
+                </span>
                 <span
-                  className="text-white/20 text-[10px] tracking-[0.25em] uppercase"
+                  className="text-white/55 text-[12px] font-medium"
                   style={{ fontFamily: "var(--font-inter)" }}
                 >
-                  Hero Image
+                  Infrastructure Overview
                 </span>
               </div>
+              <span
+                className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase"
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                ● Live
+              </span>
             </div>
 
-            {/* Floating card — clients */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.5 }}
-              className="absolute bottom-6 left-6 bg-[#2a2a2a]/90 backdrop-blur-sm border border-[#ffffff]/7 rounded-lg px-4 py-3.5"
-            >
-              <div
-                className="text-accent text-2xl font-extrabold leading-none"
-                style={{ fontFamily: "var(--font-nunito)" }}
-              >
-                500+
-              </div>
-              <div
-                className="text-white/45 text-[11px] mt-1"
-                style={{ fontFamily: "var(--font-inter)" }}
-              >
-                Satisfied clients
-              </div>
-            </motion.div>
+            {/* Status rows */}
+            <div className="px-5 py-5 space-y-3.5">
+              {statusItems.map((item, i) => (
+                <motion.div
+                  key={item.label}
+                  initial={{ opacity: 0, x: 10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.5 + i * 0.08, duration: 0.4 }}
+                  className="flex items-center gap-3"
+                >
+                  <div className={`w-1.5 h-1.5 rounded-full shrink-0 ${item.color}`} />
+                  <span
+                    className="text-white/40 text-[12px] w-20 shrink-0"
+                    style={{ fontFamily: "var(--font-inter)" }}
+                  >
+                    {item.label}
+                  </span>
+                  <div className="flex-1 h-1 bg-white/5 rounded-full overflow-hidden">
+                    <motion.div
+                      className={`h-full ${item.color} rounded-full`}
+                      initial={{ width: "0%" }}
+                      animate={{ width: item.pct }}
+                      transition={{ delay: 0.7 + i * 0.08, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+                    />
+                  </div>
+                  <span
+                    className="text-white/55 text-[11px] w-16 text-right shrink-0"
+                    style={{ fontFamily: "var(--font-inter)" }}
+                  >
+                    {item.status}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
 
-            {/* Floating card — established */}
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.5 }}
-              className="absolute top-6 right-6 bg-accent rounded-lg px-3.5 py-3"
-            >
-              <div
-                className="text-[#1a1a1a] text-xs font-black leading-none"
-                style={{ fontFamily: "var(--font-nunito)" }}
-              >
-                EST. 2014
-              </div>
-              <div
-                className="text-[#1a1a1a]/60 text-[10px] mt-0.5"
-                style={{ fontFamily: "var(--font-inter)" }}
-              >
-                Trusted IT Partner
-              </div>
-            </motion.div>
+            {/* Divider */}
+            <div className="mx-5 h-px bg-white/5" />
+
+            {/* Metric cards */}
+            <div className="px-5 py-5 grid grid-cols-3 gap-3">
+              {metrics.map((m, i) => (
+                <motion.div
+                  key={m.label}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.85 + i * 0.07, duration: 0.4 }}
+                  className="bg-white/3 border border-white/6 rounded-lg p-3"
+                >
+                  <div
+                    className="text-white text-xl font-extrabold leading-none"
+                    style={{ fontFamily: "var(--font-nunito)" }}
+                  >
+                    {m.value}
+                  </div>
+                  <div
+                    className="text-white/30 text-[10px] mt-1.5"
+                    style={{ fontFamily: "var(--font-inter)" }}
+                  >
+                    {m.label}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Divider */}
+            <div className="mx-5 h-px bg-white/5" />
+
+            {/* Tech brand tags */}
+            <div className="px-5 py-4 flex flex-wrap gap-2">
+              {techTags.map((tag, i) => (
+                <motion.span
+                  key={tag}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1.05 + i * 0.05 }}
+                  className="flex items-center gap-1.5 px-2.5 py-1 bg-accent/6 border border-accent/12 rounded text-accent/80 text-[10px] font-semibold tracking-wide"
+                  style={{ fontFamily: "var(--font-inter)" }}
+                >
+                  <RiCheckboxCircleLine size={10} />
+                  {tag}
+                </motion.span>
+              ))}
+            </div>
           </div>
 
           {/* Decorative offset border */}
