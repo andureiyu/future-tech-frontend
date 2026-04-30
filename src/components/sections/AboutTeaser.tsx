@@ -1,10 +1,19 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { RiArrowRightLine, RiCheckLine } from "react-icons/ri";
 import { SectionBadge } from "@/components/ui/section-badge";
+
+const slides = [
+  { src: "/assets/images/teamphotos.jpg", alt: "Future Technologies team" },
+  { src: "/assets/images/photo2.jpg", alt: "Future Technologies team photo 2" },
+  { src: "/assets/images/photo3.jpg", alt: "Future Technologies team photo 3" },
+  { src: "/assets/images/photo4.jpg", alt: "Future Technologies team photo 4" },
+  { src: "/assets/images/photo5.jpg", alt: "Future Technologies team photo 5" },
+];
 
 const highlights = [
   "Locally owned and operated in Tandag, Surigao del Sur",
@@ -14,6 +23,15 @@ const highlights = [
 ];
 
 export default function AboutTeaser() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="py-24 bg-bg-secondary">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -27,16 +45,38 @@ export default function AboutTeaser() {
             className="relative"
           >
             <div className="relative aspect-4/3 rounded-lg overflow-hidden border border-white/6">
-              <Image
-                src="/assets/images/teamphotos.jpg"
-                alt="Future Technologies team"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
-              />
+              <AnimatePresence mode="sync">
+                <motion.div
+                  key={current}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.9, ease: "easeInOut" }}
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src={slides[current].src}
+                    alt={slides[current].alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    priority={current === 0}
+                  />
+                </motion.div>
+              </AnimatePresence>
               {/* Subtle dark gradient at bottom for depth */}
               <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
+              {/* Dot indicators */}
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 pointer-events-none">
+                {slides.map((_, i) => (
+                  <div
+                    key={i}
+                    className={`h-1 rounded-full transition-all duration-300 ${
+                      i === current ? "w-5 bg-accent" : "w-1.5 bg-white/40"
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
 
             {/* Offset decorative border */}
@@ -91,7 +131,7 @@ export default function AboutTeaser() {
 
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-accent text-[#1a1a1a] font-bold text-sm rounded-[3px] hover:bg-accent-hover transition-all duration-200 hover:gap-3"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-accent text-[#1a1a1a] font-bold text-sm rounded-sm hover:bg-accent-hover transition-all duration-200 hover:gap-3"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Learn Our Story
