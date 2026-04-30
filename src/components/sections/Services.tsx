@@ -11,6 +11,8 @@ import {
   RiToolsLine,
   RiArrowRightLine,
 } from "react-icons/ri";
+import { GlowCard } from "@/components/ui/glow-card";
+import { SectionBadge } from "@/components/ui/section-badge";
 
 const services = [
   {
@@ -58,13 +60,7 @@ export default function Services() {
         {/* Section header */}
         <div className="max-w-xl mb-14">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-7 h-px bg-accent" />
-            <span
-              className="text-accent text-[11px] font-semibold tracking-[0.22em] uppercase"
-              style={{ fontFamily: "var(--font-inter)" }}
-            >
-              What We Offer
-            </span>
+            <SectionBadge>What We Offer</SectionBadge>
           </div>
           <h2
             className="text-[38px] font-extrabold text-white tracking-tight mb-4 leading-tight"
@@ -92,23 +88,24 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.45, delay: i * 0.07 }}
-              className="bg-bg-primary p-8 group hover:bg-[#3d3d3d] transition-colors duration-300 cursor-default"
             >
-              <div className="w-10 h-10 bg-accent/10 rounded-[3px] flex items-center justify-center mb-5 group-hover:bg-accent/18 transition-colors">
-                <service.icon className="text-accent" size={19} />
-              </div>
-              <h3
-                className="text-[17px] font-bold text-white mb-3"
-                style={{ fontFamily: "var(--font-nunito)" }}
-              >
-                {service.title}
-              </h3>
-              <p
-                className="text-white/40 text-sm leading-relaxed"
-                style={{ fontFamily: "var(--font-inter)" }}
-              >
-                {service.description}
-              </p>
+              <GlowCard className="bg-bg-primary p-8 group hover:bg-[#3d3d3d] transition-colors duration-300 cursor-default h-full">
+                <div className="w-10 h-10 bg-accent/10 rounded-[3px] flex items-center justify-center mb-5 group-hover:bg-accent/18 transition-colors">
+                  <service.icon className="text-accent" size={19} />
+                </div>
+                <h3
+                  className="text-[17px] font-bold text-white mb-3"
+                  style={{ fontFamily: "var(--font-nunito)" }}
+                >
+                  {service.title}
+                </h3>
+                <p
+                  className="text-white/40 text-sm leading-relaxed"
+                  style={{ fontFamily: "var(--font-inter)" }}
+                >
+                  {service.description}
+                </p>
+              </GlowCard>
             </motion.div>
           ))}
         </div>

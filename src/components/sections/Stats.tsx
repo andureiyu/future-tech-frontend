@@ -2,12 +2,13 @@
 
 import { motion } from "framer-motion";
 import { RiTrophyLine, RiGroupLine, RiComputerLine, RiTimeLine } from "react-icons/ri";
+import { NumberTicker } from "@/components/ui/number-ticker";
 
 const stats = [
-  { icon: RiTrophyLine, value: "10+", label: "Years in Business" },
-  { icon: RiGroupLine, value: "500+", label: "Clients Served" },
-  { icon: RiComputerLine, value: "1,000+", label: "Projects Completed" },
-  { icon: RiTimeLine, value: "24/7", label: "Technical Support" },
+  { icon: RiTrophyLine, value: 10, suffix: "+", label: "Years in Business" },
+  { icon: RiGroupLine, value: 500, suffix: "+", label: "Clients Served" },
+  { icon: RiComputerLine, value: 1000, suffix: "+", label: "Projects Completed" },
+  { icon: RiTimeLine, value: null, display: "24/7", label: "Technical Support" },
 ];
 
 export default function Stats() {
@@ -32,7 +33,11 @@ export default function Stats() {
                   className="text-2xl font-extrabold text-white leading-none"
                   style={{ fontFamily: "var(--font-nunito)" }}
                 >
-                  {stat.value}
+                  {stat.value !== null ? (
+                    <NumberTicker value={stat.value} suffix={stat.suffix} />
+                  ) : (
+                    stat.display
+                  )}
                 </div>
                 <div
                   className="text-white/35 text-xs mt-1"

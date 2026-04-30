@@ -2,6 +2,14 @@
 
 import { motion } from "framer-motion";
 import { RiCheckLine, RiEyeLine, RiFocusLine, RiMapPinLine } from "react-icons/ri";
+import dynamic from "next/dynamic";
+
+const TandagMap = dynamic(() => import("@/components/TandagMap"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full min-h-85 rounded-lg bg-[#f0f4f8] animate-pulse" />
+  ),
+});
 
 const values = [
   {
@@ -104,29 +112,8 @@ export default function AboutContent() {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="aspect-4/3 rounded-lg overflow-hidden border border-white/8 relative shadow-[0_0_0_1px_rgba(255,188,0,0.08)]">
-                <iframe
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=126.1231%2C9.0583%2C126.1831%2C9.0983&layer=mapnik"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  title="Tandag City, Surigao del Sur"
-                  className="w-full h-full"
-                />
-                {/* Subtle warm overlay to tie into site palette */}
-                <div className="absolute inset-0 bg-amber-900/5 pointer-events-none" />
-                {/* Location badge */}
-                <div className="absolute bottom-4 left-4 flex items-center gap-2 bg-bg-secondary/95 backdrop-blur-sm border border-border-subtle/50 rounded-[3px] px-3 py-1.5 shadow-md">
-                  <RiMapPinLine className="text-accent" size={13} />
-                  <span
-                    className="text-white/75 text-[11px] tracking-wide"
-                    style={{ fontFamily: "var(--font-inter)" }}
-                  >
-                    Tandag City, Surigao del Sur
-                  </span>
-                </div>
+              <div className="aspect-4/3 rounded-lg overflow-hidden border border-white/10 relative shadow-[0_0_0_1px_rgba(255,188,0,0.08)]">
+                <TandagMap />
               </div>
               <div className="absolute -bottom-3 -right-3 w-24 h-24 border border-accent/12 rounded-lg -z-10" />
             </motion.div>
