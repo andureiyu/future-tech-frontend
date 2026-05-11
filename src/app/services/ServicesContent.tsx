@@ -12,6 +12,7 @@ import {
   RiArrowRightLine,
   RiCheckLine,
 } from "react-icons/ri";
+import FAQ from "@/components/sections/FAQ";
 
 const services = [
   {
@@ -221,6 +222,8 @@ export default function ServicesContent() {
           </div>
         </div>
       </section>
+
+      <FAQ />
     </div>
   );
 }
