@@ -47,7 +47,7 @@ export default function WhyUs() {
             <SectionBadge>Why Choose Us</SectionBadge>
           </div>
           <h2
-            className="text-[38px] font-extrabold text-gray-900 tracking-tight leading-tight"
+            className="text-[28px] lg:text-[38px] font-extrabold text-gray-900 tracking-tight leading-tight"
             style={{ fontFamily: "var(--font-nunito)" }}
           >
             The Future Technologies

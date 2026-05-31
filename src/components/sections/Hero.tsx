@@ -29,20 +29,21 @@ export default function Hero() {
       {/* Accent glow top-right */}
       <div className="absolute top-0 right-0 w-125 h-125 bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pt-32 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pt-24 pb-16 md:pt-32 md:pb-20 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
         {/* Left: Copy */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center md:text-left"
         >
           {/* Eyebrow — SectionBadge */}
-          <div className="mb-7">
+          <div className="mb-7 flex justify-center md:justify-start">
             <SectionBadge>Tandag, Surigao del Sur</SectionBadge>
           </div>
 
           <h1
-            className="text-[52px] lg:text-[64px] font-extrabold text-gray-900 leading-[1.05] tracking-tight mb-6"
+            className="text-[36px] sm:text-[46px] lg:text-[64px] font-extrabold text-gray-900 leading-[1.05] tracking-tight mb-6"
             style={{ fontFamily: "var(--font-nunito)" }}
           >
             Innovate.
@@ -53,7 +54,7 @@ export default function Hero() {
           </h1>
 
           <p
-            className="text-slate-500 text-[17px] leading-relaxed max-w-120 mb-10"
+            className="text-slate-500 text-[17px] leading-relaxed max-w-120 mb-10 mx-auto md:mx-0"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Future Technologies delivers enterprise-grade IT solutions to
@@ -61,7 +62,7 @@ export default function Hero() {
             servers to advanced security systems and full network deployments.
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             <Link
               href="/services"
               className="inline-flex items-center gap-2 px-7 py-3.5 bg-accent text-white font-bold text-sm rounded-[3px] hover:bg-accent-hover transition-all duration-200 hover:gap-3"
@@ -82,7 +83,7 @@ export default function Hero() {
 
           {/* Trust bar */}
           <div
-            className="mt-12 flex items-center gap-5 text-sm text-gray-400"
+            className="mt-12 flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm text-gray-400"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             <span>7+ Years</span>
@@ -98,12 +99,12 @@ export default function Hero() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="hidden lg:block relative"
+          className="hidden md:block relative"
         >
           <div className="bg-white rounded-2xl border border-gray-200 shadow-[0_24px_80px_rgba(0,0,0,0.07)] overflow-hidden">
 
             {/* Header */}
-            <div className="px-8 pt-8 pb-7 border-b border-gray-100">
+            <div className="px-5 pt-5 pb-4 lg:px-8 lg:pt-8 lg:pb-7 border-b border-gray-100">
               <div className="flex items-center gap-2.5 mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent block" />
                 <span
@@ -130,10 +131,10 @@ export default function Hero() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.25 + i * 0.07, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                  className="flex items-center justify-between px-8 py-6 border-b border-gray-100 last:border-0 hover:bg-gray-50/60 transition-colors duration-200"
+                  className="flex items-center justify-between px-5 py-4 lg:px-8 lg:py-6 border-b border-gray-100 last:border-0 hover:bg-gray-50/60 transition-colors duration-200"
                 >
                   <span
-                    className="text-gray-900 font-extrabold text-[22px] leading-none"
+                    className="text-gray-900 font-extrabold text-[16px] lg:text-[22px] leading-none"
                     style={{ fontFamily: "var(--font-nunito)" }}
                   >
                     {client.name}
@@ -153,7 +154,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.4 }}
-              className="px-8 py-5 bg-gray-50 border-t border-gray-100 flex items-center gap-2.5"
+              className="px-5 py-4 lg:px-8 lg:py-5 bg-gray-50 border-t border-gray-100 flex items-center gap-2.5"
             >
               <span className="w-1 h-1 rounded-full bg-gray-300 shrink-0 block" />
               <span

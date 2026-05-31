@@ -89,13 +89,14 @@ export default function AboutTeaser() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+            className="text-center md:text-left"
           >
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
               <SectionBadge>About Us</SectionBadge>
             </div>
 
             <h2
-              className="text-[38px] font-extrabold text-gray-900 tracking-tight mb-5 leading-tight"
+              className="text-[28px] lg:text-[38px] font-extrabold text-gray-900 tracking-tight mb-5 leading-tight"
               style={{ fontFamily: "var(--font-nunito)" }}
             >
               Mindanao&apos;s Trusted
@@ -104,7 +105,7 @@ export default function AboutTeaser() {
             </h2>
 
             <p
-              className="text-slate-500 text-base leading-relaxed mb-8"
+              className="text-slate-500 text-base leading-relaxed mb-8 mx-auto md:mx-0"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Founded with a mission to make quality technology accessible,
@@ -115,7 +116,7 @@ export default function AboutTeaser() {
 
             <ul className="space-y-3.5 mb-10">
               {highlights.map((item) => (
-                <li key={item} className="flex items-start gap-3">
+                <li key={item} className="flex items-start gap-3 justify-center md:justify-start">
                   <div className="mt-0.5 w-4.5 h-4.5 bg-accent/12 rounded-[3px] flex items-center justify-center shrink-0">
                     <RiCheckLine className="text-accent" size={11} />
                   </div>
@@ -129,14 +130,16 @@ export default function AboutTeaser() {
               ))}
             </ul>
 
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-accent text-white font-bold text-sm rounded-sm hover:bg-accent-hover transition-all duration-200 hover:gap-3"
-              style={{ fontFamily: "var(--font-inter)" }}
-            >
-              Learn Our Story
-              <RiArrowRightLine size={14} />
-            </Link>
+            <div className="flex justify-center md:justify-start">
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-accent text-white font-bold text-sm rounded-sm hover:bg-accent-hover transition-all duration-200 hover:gap-3"
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                Learn Our Story
+                <RiArrowRightLine size={14} />
+              </Link>
+            </div>
           </motion.div>
         </div>
       </div>

@@ -59,7 +59,7 @@ export default function FAQ() {
             <SectionBadge>FAQ</SectionBadge>
           </div>
           <h2
-            className="text-[38px] font-extrabold text-gray-900 tracking-tight leading-tight mb-4"
+            className="text-[30px] lg:text-[38px] font-extrabold text-gray-900 tracking-tight leading-tight mb-4"
             style={{ fontFamily: "var(--font-nunito)" }}
           >
             Frequently Asked
