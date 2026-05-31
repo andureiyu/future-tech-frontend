@@ -23,15 +23,14 @@ export default function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.45, delay: i * 0.09 }}
-              className="flex items-center gap-4"
+              className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:gap-4"
             >
               <div className="w-10 h-10 bg-accent/10 rounded-[3px] flex items-center justify-center shrink-0">
                 <stat.icon className="text-accent" size={19} />
               </div>
-              <div>
+              <div className="text-center sm:text-left">
                 <div
                   className="text-2xl font-extrabold text-gray-900 leading-none"
-                  style={{ fontFamily: "var(--font-nunito)" }}
                 >
                   {stat.value !== null ? (
                     <NumberTicker value={stat.value} suffix={stat.suffix} />

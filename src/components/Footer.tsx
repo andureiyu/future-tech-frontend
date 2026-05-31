@@ -30,8 +30,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Brand column */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2.5 mb-5 w-fit">
+          <div className="lg:col-span-1 text-center md:text-left">
+            <Link href="/" className="flex items-center gap-2.5 mb-5 w-fit mx-auto md:mx-0">
               <div className="relative w-9 h-9 shrink-0">
                 <div className="w-9 h-9 rounded-full overflow-hidden bg-white">
                   <Image
@@ -76,7 +76,7 @@ export default function Footer() {
           </div>
 
           {/* Navigation */}
-          <div>
+          <div className="text-center md:text-left">
             <h4
               className="text-gray-900 text-[11px] font-bold mb-5 uppercase tracking-[0.15em]"
               style={{ fontFamily: "var(--font-nunito)" }}
@@ -99,7 +99,7 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="text-center md:text-left">
             <h4
               className="text-gray-900 text-[11px] font-bold mb-5 uppercase tracking-[0.15em]"
               style={{ fontFamily: "var(--font-nunito)" }}
@@ -122,7 +122,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="text-center md:text-left">
             <h4
               className="text-gray-900 text-[11px] font-bold mb-5 uppercase tracking-[0.15em]"
               style={{ fontFamily: "var(--font-nunito)" }}
@@ -130,7 +130,7 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3">
+              <li className="flex items-start gap-3 justify-center md:justify-start">
                 <RiMapPinLine
                   className="text-accent mt-0.5 shrink-0"
                   size={15}
@@ -144,7 +144,7 @@ export default function Footer() {
                   Philippines
                 </span>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center gap-3 justify-center md:justify-start">
                 <RiPhoneLine className="text-accent shrink-0" size={15} />
                 <a
                   href="https://www.facebook.com/profile.php?id=100083088619270"
@@ -156,7 +156,7 @@ export default function Footer() {
                   Inquire via Facebook
                 </a>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center gap-3 justify-center md:justify-start">
                 <RiMailLine className="text-accent shrink-0" size={15} />
                 <Link
                   href="/contact"

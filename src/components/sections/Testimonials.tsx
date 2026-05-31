@@ -44,7 +44,7 @@ export default function Testimonials() {
             <div className="w-7 h-px bg-accent" />
           </div>
           <h2
-            className="text-[38px] font-extrabold text-gray-900 tracking-tight leading-tight"
+            className="text-[30px] lg:text-[38px] font-extrabold text-gray-900 tracking-tight leading-tight"
             style={{ fontFamily: "var(--font-nunito)" }}
           >
             What Our Clients Say

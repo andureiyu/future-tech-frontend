@@ -58,12 +58,12 @@ export default function Services() {
     <section className="py-24 bg-bg-primary">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Section header */}
-        <div className="max-w-xl mb-14">
-          <div className="flex items-center gap-3 mb-4">
+        <div className="max-w-xl mb-14 text-center md:text-left">
+          <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
             <SectionBadge>What We Offer</SectionBadge>
           </div>
           <h2
-            className="text-[38px] font-extrabold text-gray-900 tracking-tight mb-4 leading-tight"
+            className="text-[28px] lg:text-[38px] font-extrabold text-gray-900 tracking-tight mb-4 leading-tight"
             style={{ fontFamily: "var(--font-nunito)" }}
           >
             Complete IT Solutions
@@ -71,7 +71,7 @@ export default function Services() {
             for Every Need
           </h2>
           <p
-            className="text-slate-500 text-base leading-relaxed"
+            className="text-slate-500 text-base leading-relaxed mx-auto md:mx-0"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             From hardware procurement to full network deployment, we cover all

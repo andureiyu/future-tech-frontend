@@ -85,8 +85,8 @@ export default function PortfolioContent() {
         />
         <div className="absolute bottom-0 left-0 w-100 h-75 bg-accent/4 rounded-full blur-[100px] pointer-events-none" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="flex items-center gap-3 mb-5">
-            <div className="w-7 h-px bg-accent" />
+          <div className="flex items-center gap-3 mb-5 justify-center md:justify-start">
+            <div className="hidden md:block w-7 h-px bg-accent" />
             <span
               className="text-accent text-[11px] font-semibold tracking-[0.22em] uppercase"
               style={{ fontFamily: "var(--font-inter)" }}
@@ -95,7 +95,7 @@ export default function PortfolioContent() {
             </span>
           </div>
           <h1
-            className="text-[48px] lg:text-[60px] font-extrabold text-gray-900 tracking-tight leading-tight max-w-2xl"
+            className="text-[32px] sm:text-[42px] md:text-[52px] lg:text-[60px] font-extrabold text-gray-900 tracking-tight leading-tight max-w-2xl text-center md:text-left"
             style={{ fontFamily: "var(--font-nunito)" }}
           >
             Projects That
@@ -103,7 +103,7 @@ export default function PortfolioContent() {
             Speak for Themselves
           </h1>
           <p
-            className="text-slate-500 text-lg leading-relaxed mt-5 max-w-xl"
+            className="text-slate-500 text-lg leading-relaxed mt-5 max-w-xl text-center md:text-left"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             A selection of deployments across government, healthcare, education,

@@ -26,7 +26,7 @@ export default function CTABanner() {
           transition={{ duration: 0.5 }}
         >
           <h2
-            className="text-[42px] lg:text-[52px] font-extrabold text-white tracking-tight leading-tight mb-4"
+            className="text-[30px] sm:text-[42px] lg:text-[52px] font-extrabold text-white tracking-tight leading-tight mb-4"
             style={{ fontFamily: "var(--font-nunito)" }}
           >
             Ready to Upgrade Your Tech?
