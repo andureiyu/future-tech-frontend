@@ -59,7 +59,7 @@ export default function FAQ() {
             <SectionBadge>FAQ</SectionBadge>
           </div>
           <h2
-            className="text-[38px] font-extrabold text-white tracking-tight leading-tight mb-4"
+            className="text-[38px] font-extrabold text-gray-900 tracking-tight leading-tight mb-4"
             style={{ fontFamily: "var(--font-nunito)" }}
           >
             Frequently Asked
@@ -67,7 +67,7 @@ export default function FAQ() {
             Questions
           </h2>
           <p
-            className="text-white/45 text-base leading-relaxed"
+            className="text-slate-500 text-base leading-relaxed"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Everything you need to know about our services, products, and how
@@ -91,8 +91,8 @@ export default function FAQ() {
                 <div
                   className={`rounded-[4px] border transition-colors duration-200 ${
                     isOpen
-                      ? "bg-bg-card border-accent/30"
-                      : "bg-bg-card border-border-subtle hover:border-accent/20"
+                      ? "bg-white border-accent/30 shadow-sm"
+                      : "bg-white border-border-subtle hover:border-accent/20"
                   }`}
                 >
                   {/* Question row */}
@@ -103,7 +103,7 @@ export default function FAQ() {
                   >
                     <span
                       className={`text-[15px] font-semibold leading-snug transition-colors duration-200 ${
-                        isOpen ? "text-accent" : "text-white group-hover:text-accent/80"
+                        isOpen ? "text-accent" : "text-gray-700 group-hover:text-accent/80"
                       }`}
                       style={{ fontFamily: "var(--font-inter)" }}
                     >
@@ -112,8 +112,8 @@ export default function FAQ() {
                     <span
                       className={`flex-shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-all duration-200 ${
                         isOpen
-                          ? "bg-accent border-accent text-bg-dark"
-                          : "bg-transparent border-border-subtle text-white/50 group-hover:border-accent/40 group-hover:text-accent/60"
+                            ? "bg-accent border-accent text-white"
+                            : "bg-transparent border-border-subtle text-gray-400 group-hover:border-accent/40 group-hover:text-accent/60"
                       }`}
                     >
                       {isOpen ? (
@@ -137,7 +137,7 @@ export default function FAQ() {
                       >
                         <div className="px-6 pb-6 border-t border-border-subtle/60 pt-4">
                           <p
-                            className="text-white/55 text-[14.5px] leading-relaxed"
+                            className="text-slate-500 text-[14.5px] leading-relaxed"
                             style={{ fontFamily: "var(--font-inter)" }}
                           >
                             {faq.answer}

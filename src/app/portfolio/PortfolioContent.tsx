@@ -79,7 +79,7 @@ export default function PortfolioContent() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `radial-gradient(circle, rgba(255,188,0,0.06) 1px, transparent 1px)`,
+            backgroundImage: `radial-gradient(circle, rgba(22,163,74,0.06) 1px, transparent 1px)`,
             backgroundSize: "32px 32px",
           }}
         />
@@ -95,7 +95,7 @@ export default function PortfolioContent() {
             </span>
           </div>
           <h1
-            className="text-[48px] lg:text-[60px] font-extrabold text-white tracking-tight leading-tight max-w-2xl"
+            className="text-[48px] lg:text-[60px] font-extrabold text-gray-900 tracking-tight leading-tight max-w-2xl"
             style={{ fontFamily: "var(--font-nunito)" }}
           >
             Projects That
@@ -103,7 +103,7 @@ export default function PortfolioContent() {
             Speak for Themselves
           </h1>
           <p
-            className="text-white/45 text-lg leading-relaxed mt-5 max-w-xl"
+            className="text-slate-500 text-lg leading-relaxed mt-5 max-w-xl"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             A selection of deployments across government, healthcare, education,
@@ -123,8 +123,8 @@ export default function PortfolioContent() {
                 onClick={() => setActiveFilter(cat)}
                 className={`px-5 py-2 text-[13px] font-semibold rounded-[3px] transition-all duration-200 ${
                   activeFilter === cat
-                    ? "bg-accent text-[#1a1a1a]"
-                    : "bg-bg-secondary text-white/50 border border-border-subtle/40 hover:text-white hover:border-border-subtle/70"
+                    ? "bg-accent text-white"
+                    : "bg-white text-gray-500 border border-border-subtle hover:text-gray-900 hover:border-gray-300"
                 }`}
                 style={{ fontFamily: "var(--font-inter)" }}
               >
@@ -141,10 +141,10 @@ export default function PortfolioContent() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="bg-bg-secondary border border-border-subtle/40 rounded-lg overflow-hidden group hover:border-border-subtle/70 transition-colors duration-300"
+                className="bg-white border border-border-subtle rounded-lg overflow-hidden group hover:shadow-sm hover:border-accent/20 transition-all duration-300"
               >
                 {/* Image placeholder */}
-                <div className="aspect-video bg-[#323232] relative overflow-hidden">
+                <div className="aspect-video bg-gray-100 relative overflow-hidden">
                   <svg
                     className="absolute inset-0 w-full h-full"
                     xmlns="http://www.w3.org/2000/svg"
@@ -159,7 +159,7 @@ export default function PortfolioContent() {
                         <path
                           d="M 30 0 L 0 0 0 30"
                           fill="none"
-                          stroke="rgba(255,255,255,0.04)"
+                          stroke="rgba(0,0,0,0.04)"
                           strokeWidth="1"
                         />
                       </pattern>
@@ -167,14 +167,14 @@ export default function PortfolioContent() {
                     <rect width="100%" height="100%" fill={`url(#grid-${i})`} />
                   </svg>
                   <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
-                    <div className="w-10 h-10 border border-[#ffffff]/8 rounded-lg flex items-center justify-center">
+                    <div className="w-10 h-10 border border-gray-200 rounded-lg flex items-center justify-center">
                       <project.icon
-                        className="text-accent/30"
+                        className="text-accent/50"
                         size={18}
                       />
                     </div>
                     <span
-                      className="text-white/15 text-[9px] tracking-[0.25em] uppercase"
+                      className="text-gray-400 text-[9px] tracking-[0.25em] uppercase"
                       style={{ fontFamily: "var(--font-inter)" }}
                     >
                       Project Photo
@@ -184,7 +184,7 @@ export default function PortfolioContent() {
                   {/* Category badge */}
                   <div className="absolute top-3 left-3">
                     <span
-                      className="px-2.5 py-1 bg-[#1a1a1a]/80 backdrop-blur-sm text-accent text-[10px] font-semibold rounded-[3px] border border-accent/20"
+                      className="px-2.5 py-1 bg-white/90 backdrop-blur-sm text-accent text-[10px] font-semibold rounded-[3px] border border-accent/20"
                       style={{ fontFamily: "var(--font-inter)" }}
                     >
                       {project.category}
@@ -195,13 +195,13 @@ export default function PortfolioContent() {
                 {/* Content */}
                 <div className="p-6">
                   <h3
-                    className="text-[15px] font-bold text-white mb-2.5 leading-snug"
+                    className="text-[15px] font-bold text-gray-900 mb-2.5 leading-snug"
                     style={{ fontFamily: "var(--font-nunito)" }}
                   >
                     {project.title}
                   </h3>
                   <p
-                    className="text-white/38 text-sm leading-relaxed mb-4"
+                    className="text-slate-500 text-sm leading-relaxed mb-4"
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
                     {project.description}
@@ -210,7 +210,7 @@ export default function PortfolioContent() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-1 bg-bg-primary text-white/35 text-[11px] rounded-[3px] border border-border-subtle/30"
+                        className="px-2.5 py-1 bg-gray-50 text-gray-500 text-[11px] rounded-[3px] border border-gray-200"
                         style={{ fontFamily: "var(--font-inter)" }}
                       >
                         {tag}

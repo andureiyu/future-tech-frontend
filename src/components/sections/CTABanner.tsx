@@ -11,12 +11,12 @@ export default function CTABanner() {
       <div
         className="absolute inset-0 opacity-[0.08]"
         style={{
-          backgroundImage: `radial-gradient(circle, #1a1a1a 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px)`,
           backgroundSize: "24px 24px",
         }}
       />
       {/* Soft radial fade */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(255,188,0,0.3)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(0,0,0,0.08)_100%)]" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 text-center">
         <motion.div
@@ -26,13 +26,13 @@ export default function CTABanner() {
           transition={{ duration: 0.5 }}
         >
           <h2
-            className="text-[42px] lg:text-[52px] font-extrabold text-[#1a1a1a] tracking-tight leading-tight mb-4"
+            className="text-[42px] lg:text-[52px] font-extrabold text-white tracking-tight leading-tight mb-4"
             style={{ fontFamily: "var(--font-nunito)" }}
           >
             Ready to Upgrade Your Tech?
           </h2>
           <p
-            className="text-[#1a1a1a]/55 text-lg mb-9 max-w-md mx-auto leading-relaxed"
+            className="text-white/70 text-lg mb-9 max-w-md mx-auto leading-relaxed"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Talk to our team and get a free consultation on the right IT
@@ -41,7 +41,7 @@ export default function CTABanner() {
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#1a1a1a] text-white font-bold text-sm rounded-[3px] hover:bg-bg-secondary transition-all duration-200 hover:gap-3"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#1a1a1a] text-white font-bold text-sm rounded-[3px] hover:bg-gray-800 transition-all duration-200 hover:gap-3"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Get a Free Quote
@@ -49,7 +49,7 @@ export default function CTABanner() {
             </Link>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-[#1a1a1a]/20 text-[#1a1a1a] font-bold text-sm rounded-[3px] hover:border-[#1a1a1a]/50 transition-all duration-200"
+              className="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-white/30 text-white font-bold text-sm rounded-[3px] hover:border-white/60 transition-all duration-200"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Browse Services

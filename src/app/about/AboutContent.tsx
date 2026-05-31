@@ -66,7 +66,7 @@ export default function AboutContent() {
         <div
           className="absolute inset-0 opacity-100"
           style={{
-            backgroundImage: `radial-gradient(circle, rgba(255,188,0,0.06) 1px, transparent 1px)`,
+            backgroundImage: `radial-gradient(circle, rgba(22,163,74,0.06) 1px, transparent 1px)`,
             backgroundSize: "32px 32px",
           }}
         />
@@ -82,7 +82,7 @@ export default function AboutContent() {
             </span>
           </div>
           <h1
-            className="text-[48px] lg:text-[60px] font-extrabold text-white tracking-tight leading-tight max-w-2xl"
+            className="text-[48px] lg:text-[60px] font-extrabold text-gray-900 tracking-tight leading-tight max-w-2xl"
             style={{ fontFamily: "var(--font-nunito)" }}
           >
             Built on Trust.
@@ -90,7 +90,7 @@ export default function AboutContent() {
             Driven by Technology.
           </h1>
           <p
-            className="text-white/45 text-lg leading-relaxed mt-5 max-w-xl"
+            className="text-slate-500 text-lg leading-relaxed mt-5 max-w-xl"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Since our founding, Future Technologies has been committed to one
@@ -112,7 +112,7 @@ export default function AboutContent() {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="aspect-4/3 rounded-lg overflow-hidden border border-white/10 relative shadow-[0_0_0_1px_rgba(255,188,0,0.08)]">
+              <div className="aspect-4/3 rounded-lg overflow-hidden border border-gray-200 relative shadow-sm">
                 <TandagMap />
               </div>
               <div className="absolute -bottom-3 -right-3 w-24 h-24 border border-accent/12 rounded-lg -z-10" />
@@ -126,13 +126,13 @@ export default function AboutContent() {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <h2
-                className="text-[32px] font-extrabold text-white tracking-tight mb-5 leading-tight"
+                className="text-[32px] font-extrabold text-gray-900 tracking-tight mb-5 leading-tight"
                 style={{ fontFamily: "var(--font-nunito)" }}
               >
                 From Tandag to All of Mindanao
               </h2>
               <div
-                className="space-y-4 text-white/48 text-base leading-relaxed"
+                className="space-y-4 text-slate-500 text-base leading-relaxed"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 <p>
@@ -168,19 +168,19 @@ export default function AboutContent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-bg-primary border border-border-subtle/40 rounded-lg p-8"
+              className="bg-bg-primary border border-border-subtle rounded-lg p-8 shadow-sm"
             >
               <div className="w-11 h-11 bg-accent/10 rounded-lg flex items-center justify-center mb-5">
                 <RiFocusLine className="text-accent" size={22} />
               </div>
               <h3
-                className="text-xl font-extrabold text-white mb-4"
+                className="text-xl font-extrabold text-gray-900 mb-4"
                 style={{ fontFamily: "var(--font-nunito)" }}
               >
                 Our Mission
               </h3>
               <p
-                className="text-white/45 text-base leading-relaxed"
+                className="text-slate-500 text-base leading-relaxed"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 To empower organizations in Mindanao with reliable, scalable, and
@@ -194,19 +194,19 @@ export default function AboutContent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-bg-primary border border-border-subtle/40 rounded-lg p-8"
+              className="bg-bg-primary border border-border-subtle rounded-lg p-8 shadow-sm"
             >
               <div className="w-11 h-11 bg-accent/10 rounded-lg flex items-center justify-center mb-5">
                 <RiEyeLine className="text-accent" size={22} />
               </div>
               <h3
-                className="text-xl font-extrabold text-white mb-4"
+                className="text-xl font-extrabold text-gray-900 mb-4"
                 style={{ fontFamily: "var(--font-nunito)" }}
               >
                 Our Vision
               </h3>
               <p
-                className="text-white/45 text-base leading-relaxed"
+                className="text-slate-500 text-base leading-relaxed"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 To be Mindanao&apos;s most trusted IT solutions company — recognized
@@ -233,7 +233,7 @@ export default function AboutContent() {
               <div className="w-7 h-px bg-accent" />
             </div>
             <h2
-              className="text-[36px] font-extrabold text-white tracking-tight"
+              className="text-[36px] font-extrabold text-gray-900 tracking-tight"
               style={{ fontFamily: "var(--font-nunito)" }}
             >
               What We Stand For
@@ -249,19 +249,19 @@ export default function AboutContent() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="bg-bg-secondary border border-border-subtle/40 rounded-lg p-7"
+                className="bg-white border border-border-subtle rounded-lg p-7 shadow-sm"
               >
                 <div className="w-7 h-7 bg-accent/12 rounded-[3px] flex items-center justify-center mb-4">
                   <RiCheckLine className="text-accent" size={15} />
                 </div>
                 <h3
-                  className="text-[15px] font-bold text-white mb-3"
+                  className="text-[15px] font-bold text-gray-900 mb-3"
                   style={{ fontFamily: "var(--font-nunito)" }}
                 >
                   {value.title}
                 </h3>
                 <p
-                  className="text-white/38 text-sm leading-relaxed"
+                  className="text-slate-500 text-sm leading-relaxed"
                   style={{ fontFamily: "var(--font-inter)" }}
                 >
                   {value.description}
@@ -287,7 +287,7 @@ export default function AboutContent() {
               <div className="w-7 h-px bg-accent" />
             </div>
             <h2
-              className="text-[36px] font-extrabold text-white tracking-tight"
+              className="text-[36px] font-extrabold text-gray-900 tracking-tight"
               style={{ fontFamily: "var(--font-nunito)" }}
             >
               The Technology
@@ -295,7 +295,7 @@ export default function AboutContent() {
               Ecosystem We Deploy
             </h2>
             <p
-              className="text-white/38 text-sm leading-relaxed mt-4"
+              className="text-slate-500 text-sm leading-relaxed mt-4"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               We source and deploy from globally recognized manufacturers —
@@ -313,19 +313,19 @@ export default function AboutContent() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="bg-bg-primary border border-border-subtle/40 rounded-lg px-5 py-6 flex flex-col items-start gap-2"
+                className="bg-bg-primary border border-border-subtle rounded-lg px-5 py-6 flex flex-col items-start gap-2"
               >
                 <div className="w-7 h-7 bg-accent/12 rounded-[3px] flex items-center justify-center mb-1">
                   <RiCheckLine className="text-accent" size={15} />
                 </div>
                 <span
-                  className="text-white/85 text-[14px] font-bold tracking-wide"
+                  className="text-gray-900 text-[14px] font-bold tracking-wide"
                   style={{ fontFamily: "var(--font-nunito)" }}
                 >
                   {partner.name}
                 </span>
                 <span
-                  className="text-white/30 text-[11px]"
+                  className="text-gray-400 text-[11px]"
                   style={{ fontFamily: "var(--font-inter)" }}
                 >
                   {partner.category}

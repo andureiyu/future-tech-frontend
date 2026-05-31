@@ -27,13 +27,13 @@ export default function Hero() {
       <div
         className="absolute inset-0 opacity-100"
         style={{
-          backgroundImage: `radial-gradient(circle, rgba(255,188,0,0.08) 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle, rgba(22,163,74,0.06) 1px, transparent 1px)`,
           backgroundSize: "32px 32px",
         }}
       />
 
-      {/* Directional gradient overlay */}
-      <div className="absolute inset-0 bg-linear-to-br from-[#2a2a2a] via-bg-secondary/80 to-bg-primary" />
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-linear-to-br from-green-50/60 via-transparent to-transparent" />
 
       {/* Accent glow top-right */}
       <div className="absolute top-0 right-0 w-125 h-125 bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
@@ -51,7 +51,7 @@ export default function Hero() {
           </div>
 
           <h1
-            className="text-[52px] lg:text-[64px] font-extrabold text-white leading-[1.05] tracking-tight mb-6"
+            className="text-[52px] lg:text-[64px] font-extrabold text-gray-900 leading-[1.05] tracking-tight mb-6"
             style={{ fontFamily: "var(--font-nunito)" }}
           >
             Innovate.
@@ -62,7 +62,7 @@ export default function Hero() {
           </h1>
 
           <p
-            className="text-white/55 text-[17px] leading-relaxed max-w-120 mb-10"
+            className="text-slate-500 text-[17px] leading-relaxed max-w-120 mb-10"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Future Technologies delivers enterprise-grade IT solutions to
@@ -73,7 +73,7 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-accent text-[#1a1a1a] font-bold text-sm rounded-[3px] hover:bg-accent-hover transition-all duration-200 hover:gap-3"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-accent text-white font-bold text-sm rounded-[3px] hover:bg-accent-hover transition-all duration-200 hover:gap-3"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Explore Services
@@ -81,7 +81,7 @@ export default function Hero() {
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-7 py-3.5 border border-white/15 text-white/80 font-semibold text-sm rounded-[3px] hover:border-accent/50 hover:text-white transition-all duration-200"
+              className="inline-flex items-center gap-2 px-7 py-3.5 border border-gray-200 text-gray-600 font-semibold text-sm rounded-[3px] hover:border-accent/50 hover:text-gray-900 transition-all duration-200"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               <RiPhoneLine size={15} />
@@ -91,13 +91,13 @@ export default function Hero() {
 
           {/* Trust bar */}
           <div
-            className="mt-12 flex items-center gap-5 text-sm text-white/30"
+            className="mt-12 flex items-center gap-5 text-sm text-gray-400"
             style={{ fontFamily: "var(--font-inter)" }}
           >
-            <span>10+ Years</span>
-            <span className="w-1 h-1 bg-white/15 rounded-full" />
+            <span>7+ Years</span>
+            <span className="w-1 h-1 bg-gray-200 rounded-full" />
             <span>500+ Clients</span>
-            <span className="w-1 h-1 bg-white/15 rounded-full" />
+            <span className="w-1 h-1 bg-gray-200 rounded-full" />
             <span>Mindanao-wide</span>
           </div>
         </motion.div>
@@ -109,17 +109,17 @@ export default function Hero() {
           transition={{ duration: 0.65, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
           className="hidden lg:block relative"
         >
-          <div className="relative w-full rounded-xl overflow-hidden border border-white/8 bg-[#242424] shadow-[0_24px_80px_rgba(0,0,0,0.4)]">
+          <div className="relative w-full rounded-xl overflow-hidden border border-gray-200 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
 
             {/* Card header */}
-            <div className="flex items-center justify-between px-5 py-4 border-b border-white/6">
+            <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
               <div className="flex items-center gap-2.5">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
                 </span>
                 <span
-                  className="text-white/55 text-[12px] font-medium"
+                  className="text-gray-500 text-[12px] font-medium"
                   style={{ fontFamily: "var(--font-inter)" }}
                 >
                   Infrastructure Overview
@@ -145,12 +145,12 @@ export default function Hero() {
                 >
                   <div className={`w-1.5 h-1.5 rounded-full shrink-0 ${item.color}`} />
                   <span
-                    className="text-white/40 text-[12px] w-20 shrink-0"
+                    className="text-gray-400 text-[12px] w-20 shrink-0"
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
                     {item.label}
                   </span>
-                  <div className="flex-1 h-1 bg-white/5 rounded-full overflow-hidden">
+                  <div className="flex-1 h-1 bg-gray-100 rounded-full overflow-hidden">
                     <motion.div
                       className={`h-full ${item.color} rounded-full`}
                       initial={{ width: "0%" }}
@@ -159,7 +159,7 @@ export default function Hero() {
                     />
                   </div>
                   <span
-                    className="text-white/55 text-[11px] w-16 text-right shrink-0"
+                    className="text-gray-500 text-[11px] w-16 text-right shrink-0"
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
                     {item.status}
@@ -169,7 +169,7 @@ export default function Hero() {
             </div>
 
             {/* Divider */}
-            <div className="mx-5 h-px bg-white/5" />
+            <div className="mx-5 h-px bg-gray-100" />
 
             {/* Metric cards */}
             <div className="px-5 py-5 grid grid-cols-3 gap-3">
@@ -179,16 +179,16 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.85 + i * 0.07, duration: 0.4 }}
-                  className="bg-white/3 border border-white/6 rounded-lg p-3"
+                  className="bg-gray-50 border border-gray-200 rounded-lg p-3"
                 >
                   <div
-                    className="text-white text-xl font-extrabold leading-none"
+                    className="text-gray-900 text-xl font-extrabold leading-none"
                     style={{ fontFamily: "var(--font-nunito)" }}
                   >
                     {m.value}
                   </div>
                   <div
-                    className="text-white/30 text-[10px] mt-1.5"
+                    className="text-gray-400 text-[10px] mt-1.5"
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
                     {m.label}
@@ -198,7 +198,7 @@ export default function Hero() {
             </div>
 
             {/* Divider */}
-            <div className="mx-5 h-px bg-white/5" />
+            <div className="mx-5 h-px bg-gray-100" />
 
             {/* Tech brand tags */}
             <div className="px-5 py-4 flex flex-wrap gap-2">
@@ -232,7 +232,7 @@ export default function Hero() {
       >
         <div className="w-px h-9 bg-linear-to-b from-accent/40 to-transparent" />
         <span
-          className="text-white/20 text-[9px] tracking-[0.3em] uppercase"
+          className="text-gray-400 text-[9px] tracking-[0.3em] uppercase"
           style={{ fontFamily: "var(--font-inter)" }}
         >
           Scroll

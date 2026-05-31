@@ -106,7 +106,7 @@ export default function ServicesContent() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `radial-gradient(circle, rgba(255,188,0,0.06) 1px, transparent 1px)`,
+            backgroundImage: `radial-gradient(circle, rgba(22,163,74,0.06) 1px, transparent 1px)`,
             backgroundSize: "32px 32px",
           }}
         />
@@ -122,7 +122,7 @@ export default function ServicesContent() {
             </span>
           </div>
           <h1
-            className="text-[48px] lg:text-[60px] font-extrabold text-white tracking-tight leading-tight max-w-2xl"
+            className="text-[48px] lg:text-[60px] font-extrabold text-gray-900 tracking-tight leading-tight max-w-2xl"
             style={{ fontFamily: "var(--font-nunito)" }}
           >
             IT Solutions Built
@@ -130,7 +130,7 @@ export default function ServicesContent() {
             for Real Business
           </h1>
           <p
-            className="text-white/45 text-lg leading-relaxed mt-5 max-w-xl"
+            className="text-slate-500 text-lg leading-relaxed mt-5 max-w-xl"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Every service we offer is backed by certified professionals, genuine
@@ -151,7 +151,7 @@ export default function ServicesContent() {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-40px" }}
                 variants={fadeUp}
-                className="bg-bg-secondary border border-border-subtle/40 rounded-lg p-8 lg:p-10 hover:border-border-subtle/70 transition-colors duration-300"
+                className="bg-white border border-border-subtle rounded-lg p-8 lg:p-10 hover:border-accent/25 hover:shadow-sm transition-colors duration-300"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-8 lg:gap-14 items-start">
                   {/* Left */}
@@ -160,13 +160,13 @@ export default function ServicesContent() {
                       <service.icon className="text-accent" size={23} />
                     </div>
                     <h2
-                      className="text-2xl font-extrabold text-white mb-4 leading-tight"
+                      className="text-2xl font-extrabold text-gray-900 mb-4 leading-tight"
                       style={{ fontFamily: "var(--font-nunito)" }}
                     >
                       {service.title}
                     </h2>
                     <p
-                      className="text-white/45 text-sm leading-relaxed"
+                      className="text-slate-500 text-sm leading-relaxed"
                       style={{ fontFamily: "var(--font-inter)" }}
                     >
                       {service.description}
@@ -176,7 +176,7 @@ export default function ServicesContent() {
                   {/* Right: Features */}
                   <div>
                     <p
-                      className="text-[11px] font-semibold text-white/30 tracking-[0.18em] uppercase mb-4"
+                      className="text-[11px] font-semibold text-gray-400 tracking-[0.18em] uppercase mb-4"
                       style={{ fontFamily: "var(--font-inter)" }}
                     >
                       What&apos;s Included
@@ -188,7 +188,7 @@ export default function ServicesContent() {
                             <RiCheckLine className="text-accent" size={11} />
                           </div>
                           <span
-                            className="text-white/55 text-sm"
+                            className="text-slate-500 text-sm"
                             style={{ fontFamily: "var(--font-inter)" }}
                           >
                             {feat}
@@ -205,7 +205,7 @@ export default function ServicesContent() {
           {/* CTA */}
           <div className="mt-16 text-center">
             <p
-              className="text-white/35 text-sm mb-5"
+              className="text-slate-500 text-sm mb-5"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Have a specific requirement? We&apos;d love to help you find the right
@@ -213,7 +213,7 @@ export default function ServicesContent() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-3.5 bg-accent text-[#1a1a1a] font-bold text-sm rounded-[3px] hover:bg-accent-hover transition-all duration-200 hover:gap-3"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-accent text-white font-bold text-sm rounded-[3px] hover:bg-accent-hover transition-all duration-200 hover:gap-3"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Request a Quote

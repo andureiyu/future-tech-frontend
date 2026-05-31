@@ -50,7 +50,7 @@ export default function ContactContent() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `radial-gradient(circle, rgba(255,188,0,0.06) 1px, transparent 1px)`,
+            backgroundImage: `radial-gradient(circle, rgba(22,163,74,0.06) 1px, transparent 1px)`,
             backgroundSize: "32px 32px",
           }}
         />
@@ -66,7 +66,7 @@ export default function ContactContent() {
             </span>
           </div>
           <h1
-            className="text-[48px] lg:text-[60px] font-extrabold text-white tracking-tight leading-tight max-w-2xl"
+            className="text-[48px] lg:text-[60px] font-extrabold text-gray-900 tracking-tight leading-tight max-w-2xl"
             style={{ fontFamily: "var(--font-nunito)" }}
           >
             Let&apos;s Talk
@@ -74,7 +74,7 @@ export default function ContactContent() {
             <span className="text-accent">IT Solutions.</span>
           </h1>
           <p
-            className="text-white/45 text-lg leading-relaxed mt-5 max-w-lg"
+            className="text-slate-500 text-lg leading-relaxed mt-5 max-w-lg"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Send us your inquiry and our team will get back to you as soon as
@@ -100,20 +100,20 @@ export default function ContactContent() {
                     <div className="w-6 h-6 bg-accent/40 rounded-full" />
                   </div>
                   <h3
-                    className="text-2xl font-extrabold text-white mb-3"
+                    className="text-2xl font-extrabold text-gray-900 mb-3"
                     style={{ fontFamily: "var(--font-nunito)" }}
                   >
                     Inquiry Received
                   </h3>
                   <p
-                    className="text-white/45 text-sm leading-relaxed max-w-sm mx-auto"
+                    className="text-slate-500 text-sm leading-relaxed max-w-sm mx-auto"
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
                     Thank you for reaching out! Our team will review your message
                     and get back to you shortly.
                   </p>
                   <p
-                    className="text-white/25 text-xs mt-4"
+                    className="text-gray-400 text-xs mt-4"
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
                     Note: Backend integration pending — form submissions will be
@@ -126,7 +126,7 @@ export default function ContactContent() {
                     <div>
                       <label
                         htmlFor="name"
-                        className="block text-[12px] font-semibold text-white/50 mb-2 tracking-wide uppercase"
+                        className="block text-[12px] font-semibold text-gray-500 mb-2 tracking-wide uppercase"
                         style={{ fontFamily: "var(--font-inter)" }}
                       >
                         Full Name *
@@ -139,14 +139,14 @@ export default function ContactContent() {
                         value={form.name}
                         onChange={handleChange}
                         placeholder="Juan dela Cruz"
-                        className="w-full bg-bg-secondary border border-border-subtle/60 rounded-[3px] px-4 py-3 text-white text-sm placeholder-white/20 focus:outline-none focus:border-accent/50 transition-colors"
+                        className="w-full bg-white border border-border-subtle rounded-[3px] px-4 py-3 text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:border-accent/50 transition-colors"
                         style={{ fontFamily: "var(--font-inter)" }}
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="email"
-                        className="block text-[12px] font-semibold text-white/50 mb-2 tracking-wide uppercase"
+                        className="block text-[12px] font-semibold text-gray-500 mb-2 tracking-wide uppercase"
                         style={{ fontFamily: "var(--font-inter)" }}
                       >
                         Email Address *
@@ -159,7 +159,7 @@ export default function ContactContent() {
                         value={form.email}
                         onChange={handleChange}
                         placeholder="juan@example.com"
-                        className="w-full bg-bg-secondary border border-border-subtle/60 rounded-[3px] px-4 py-3 text-white text-sm placeholder-white/20 focus:outline-none focus:border-accent/50 transition-colors"
+                        className="w-full bg-white border border-border-subtle rounded-[3px] px-4 py-3 text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:border-accent/50 transition-colors"
                         style={{ fontFamily: "var(--font-inter)" }}
                       />
                     </div>
@@ -169,7 +169,7 @@ export default function ContactContent() {
                     <div>
                       <label
                         htmlFor="phone"
-                        className="block text-[12px] font-semibold text-white/50 mb-2 tracking-wide uppercase"
+                        className="block text-[12px] font-semibold text-gray-500 mb-2 tracking-wide uppercase"
                         style={{ fontFamily: "var(--font-inter)" }}
                       >
                         Phone Number
@@ -181,14 +181,14 @@ export default function ContactContent() {
                         value={form.phone}
                         onChange={handleChange}
                         placeholder="+63 9xx xxx xxxx"
-                        className="w-full bg-bg-secondary border border-border-subtle/60 rounded-[3px] px-4 py-3 text-white text-sm placeholder-white/20 focus:outline-none focus:border-accent/50 transition-colors"
+                        className="w-full bg-white border border-border-subtle rounded-[3px] px-4 py-3 text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:border-accent/50 transition-colors"
                         style={{ fontFamily: "var(--font-inter)" }}
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="service"
-                        className="block text-[12px] font-semibold text-white/50 mb-2 tracking-wide uppercase"
+                        className="block text-[12px] font-semibold text-gray-500 mb-2 tracking-wide uppercase"
                         style={{ fontFamily: "var(--font-inter)" }}
                       >
                         Service of Interest
@@ -198,10 +198,10 @@ export default function ContactContent() {
                         name="service"
                         value={form.service}
                         onChange={handleChange}
-                        className="w-full bg-bg-secondary border border-border-subtle/60 rounded-[3px] px-4 py-3 text-sm focus:outline-none focus:border-accent/50 transition-colors appearance-none"
+                        className="w-full bg-white border border-border-subtle rounded-[3px] px-4 py-3 text-sm focus:outline-none focus:border-accent/50 transition-colors appearance-none"
                         style={{
                           fontFamily: "var(--font-inter)",
-                          color: form.service ? "white" : "rgba(255,255,255,0.2)",
+                          color: form.service ? "#111827" : "#9ca3af",
                         }}
                       >
                         <option value="" disabled>
@@ -211,7 +211,7 @@ export default function ContactContent() {
                           <option
                             key={opt}
                             value={opt}
-                            style={{ color: "white", background: "#2d2d2d" }}
+                            style={{ color: "#111827", background: "white" }}
                           >
                             {opt}
                           </option>
@@ -223,7 +223,7 @@ export default function ContactContent() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-[12px] font-semibold text-white/50 mb-2 tracking-wide uppercase"
+                      className="block text-[12px] font-semibold text-gray-500 mb-2 tracking-wide uppercase"
                       style={{ fontFamily: "var(--font-inter)" }}
                     >
                       Message *
@@ -236,14 +236,14 @@ export default function ContactContent() {
                       value={form.message}
                       onChange={handleChange}
                       placeholder="Describe your project, requirements, or questions..."
-                      className="w-full bg-bg-secondary border border-border-subtle/60 rounded-[3px] px-4 py-3 text-white text-sm placeholder-white/20 focus:outline-none focus:border-accent/50 transition-colors resize-none"
+                      className="w-full bg-white border border-border-subtle rounded-[3px] px-4 py-3 text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:border-accent/50 transition-colors resize-none"
                       style={{ fontFamily: "var(--font-inter)" }}
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-2 px-8 py-3.5 bg-accent text-[#1a1a1a] font-bold text-sm rounded-[3px] hover:bg-accent-hover transition-all duration-200 hover:gap-3"
+                    className="inline-flex items-center gap-2 px-8 py-3.5 bg-accent text-white font-bold text-sm rounded-[3px] hover:bg-accent-hover transition-all duration-200 hover:gap-3"
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
                     Send Inquiry
@@ -262,20 +262,20 @@ export default function ContactContent() {
               className="space-y-4"
             >
               {/* Location */}
-              <div className="bg-bg-secondary border border-border-subtle/40 rounded-lg p-6">
+              <div className="bg-white border border-border-subtle rounded-lg p-6 shadow-sm">
                 <div className="flex items-start gap-4">
                   <div className="w-9 h-9 bg-accent/10 rounded-[3px] flex items-center justify-center shrink-0 mt-0.5">
                     <RiMapPinLine className="text-accent" size={17} />
                   </div>
                   <div>
                     <h4
-                      className="text-white text-[13px] font-bold mb-1.5"
+                      className="text-gray-900 text-[13px] font-bold mb-1.5"
                       style={{ fontFamily: "var(--font-nunito)" }}
                     >
                       Location
                     </h4>
                     <p
-                      className="text-white/40 text-sm leading-relaxed"
+                      className="text-slate-500 text-sm leading-relaxed"
                       style={{ fontFamily: "var(--font-inter)" }}
                     >
                       Tandag City, Surigao del Sur
@@ -287,14 +287,14 @@ export default function ContactContent() {
               </div>
 
               {/* Facebook */}
-              <div className="bg-bg-secondary border border-border-subtle/40 rounded-lg p-6">
+              <div className="bg-white border border-border-subtle rounded-lg p-6 shadow-sm">
                 <div className="flex items-start gap-4">
                   <div className="w-9 h-9 bg-accent/10 rounded-[3px] flex items-center justify-center shrink-0 mt-0.5">
                     <RiFacebookBoxFill className="text-accent" size={17} />
                   </div>
                   <div>
                     <h4
-                      className="text-white text-[13px] font-bold mb-1.5"
+                      className="text-gray-900 text-[13px] font-bold mb-1.5"
                       style={{ fontFamily: "var(--font-nunito)" }}
                     >
                       Facebook
@@ -309,7 +309,7 @@ export default function ContactContent() {
                       Future Technologies — Tandag
                     </a>
                     <p
-                      className="text-white/30 text-xs mt-1"
+                      className="text-gray-400 text-xs mt-1"
                       style={{ fontFamily: "var(--font-inter)" }}
                     >
                       Message us directly for quick inquiries
@@ -319,14 +319,14 @@ export default function ContactContent() {
               </div>
 
               {/* Business hours */}
-              <div className="bg-bg-secondary border border-border-subtle/40 rounded-lg p-6">
+              <div className="bg-white border border-border-subtle rounded-lg p-6 shadow-sm">
                 <div className="flex items-start gap-4">
                   <div className="w-9 h-9 bg-accent/10 rounded-[3px] flex items-center justify-center shrink-0 mt-0.5">
                     <RiTimeLine className="text-accent" size={17} />
                   </div>
                   <div>
                     <h4
-                      className="text-white text-[13px] font-bold mb-3"
+                      className="text-gray-900 text-[13px] font-bold mb-3"
                       style={{ fontFamily: "var(--font-nunito)" }}
                     >
                       Business Hours
@@ -339,7 +339,7 @@ export default function ContactContent() {
                       ].map((h) => (
                         <div key={h.day} className="flex justify-between gap-4">
                           <span
-                            className="text-white/35 text-xs"
+                            className="text-slate-500 text-xs"
                             style={{ fontFamily: "var(--font-inter)" }}
                           >
                             {h.day}
@@ -347,8 +347,8 @@ export default function ContactContent() {
                           <span
                             className={`text-xs font-medium ${
                               h.time === "Closed"
-                                ? "text-white/20"
-                                : "text-white/60"
+                                ? "text-gray-400"
+                                : "text-gray-700"
                             }`}
                             style={{ fontFamily: "var(--font-inter)" }}
                           >

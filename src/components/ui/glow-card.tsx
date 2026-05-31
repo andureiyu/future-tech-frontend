@@ -40,7 +40,7 @@ export function GlowCard({
       style={
         hovered
           ? {
-              background: `radial-gradient(${radius}px at ${pos.x}px ${pos.y}px, rgba(255,188,0,0.07), transparent 80%)`,
+              background: `radial-gradient(${radius}px at ${pos.x}px ${pos.y}px, rgba(22,163,74,0.07), transparent 80%)`,
             }
           : undefined
       }
