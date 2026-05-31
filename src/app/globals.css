@@ -33,3 +33,33 @@ body {
 * {
   box-sizing: border-box;
 }
+
+@keyframes marquee {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.ticker-outer {
+  overflow: hidden;
+  width: 100%;
+}
+
+.ticker-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  white-space: nowrap;
+  animation: marquee 40s linear infinite;
+  will-change: transform;
+}
+
+.ticker-set {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ticker-inner:hover {
+  animation-play-state: paused;
+}
