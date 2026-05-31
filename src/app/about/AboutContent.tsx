@@ -30,7 +30,7 @@ const values = [
   {
     title: "Innovation",
     description:
-      "We stay ahead of technological trends so we can recommend solutions that are not just current — but future-proof.",
+      "We stay ahead of technological trends so we can recommend solutions that are not just current, but future-proof.",
   },
 ];
 
@@ -93,7 +93,7 @@ export default function AboutContent() {
             className="text-slate-500 text-lg leading-relaxed mt-5 max-w-xl"
             style={{ fontFamily: "var(--font-inter)" }}
           >
-            Since our founding, Future Technologies has been committed to one
+            Since our founding in 2019, Future Technologies has been committed to one
             thing: making enterprise-quality IT accessible to every business in
             Surigao del Sur and across Mindanao.
           </p>
@@ -108,7 +108,7 @@ export default function AboutContent() {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6 }}
               className="relative"
             >
@@ -122,7 +122,7 @@ export default function AboutContent() {
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <h2
@@ -144,7 +144,7 @@ export default function AboutContent() {
                 </p>
                 <p>
                   Over the years, we&apos;ve grown from a small computer shop to a
-                  full-service IT solutions provider — handling everything from
+                  full-service IT solutions provider, handling everything from
                   workstation assembly and network deployment to CCTV
                   installation and enterprise server management.
                 </p>
@@ -166,7 +166,7 @@ export default function AboutContent() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5 }}
               className="bg-bg-primary border border-border-subtle rounded-lg p-8 shadow-sm"
             >
@@ -184,7 +184,7 @@ export default function AboutContent() {
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 To empower organizations in Mindanao with reliable, scalable, and
-                cost-effective IT solutions — delivered with integrity, expertise,
+                cost-effective IT solutions, delivered with integrity, expertise,
                 and genuine commitment to long-term client success.
               </p>
             </motion.div>
@@ -192,7 +192,7 @@ export default function AboutContent() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="bg-bg-primary border border-border-subtle rounded-lg p-8 shadow-sm"
             >
@@ -209,7 +209,7 @@ export default function AboutContent() {
                 className="text-slate-500 text-base leading-relaxed"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
-                To be Mindanao&apos;s most trusted IT solutions company — recognized
+                To be Mindanao&apos;s most trusted IT solutions company, recognized
                 not just for the technology we deploy, but for the relationships
                 we build and the communities we help grow.
               </p>
@@ -247,7 +247,7 @@ export default function AboutContent() {
                 custom={i}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-60px" }}
                 variants={fadeUp}
                 className="bg-white border border-border-subtle rounded-lg p-7 shadow-sm"
               >
@@ -298,7 +298,7 @@ export default function AboutContent() {
               className="text-slate-500 text-sm leading-relaxed mt-4"
               style={{ fontFamily: "var(--font-inter)" }}
             >
-              We source and deploy from globally recognized manufacturers —
+              We source and deploy from globally recognized manufacturers,
               ensuring every build, installation, and deployment meets
               enterprise-grade standards.
             </p>
@@ -311,7 +311,7 @@ export default function AboutContent() {
                 custom={i}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-60px" }}
                 variants={fadeUp}
                 className="bg-bg-primary border border-border-subtle rounded-lg px-5 py-6 flex flex-col items-start gap-2"
               >

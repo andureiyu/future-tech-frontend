@@ -2,23 +2,14 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { RiArrowRightLine, RiPhoneLine, RiCheckboxCircleLine } from "react-icons/ri";
+import { RiArrowRightLine, RiPhoneLine } from "react-icons/ri";
 import { SectionBadge } from "@/components/ui/section-badge";
 
-const statusItems = [
-  { label: "Network", status: "Online", pct: "100%", color: "bg-emerald-400" },
-  { label: "Security", status: "Protected", pct: "98%", color: "bg-emerald-400" },
-  { label: "Servers", status: "Active", pct: "100%", color: "bg-emerald-400" },
-  { label: "Backup", status: "Synced", pct: "94%", color: "bg-accent" },
+const clientCards = [
+  { name: "DMSF", sector: "Public Sector" },
+  { name: "BARMM", sector: "Government" },
+  { name: "Royal Mandaya Hotel", sector: "Hospitality" },
 ];
-
-const metrics = [
-  { value: "99.9%", label: "Uptime" },
-  { value: "<2ms", label: "Response" },
-  { value: "500+", label: "Clients" },
-];
-
-const techTags = ["Cisco", "HP", "Dell", "Hikvision", "TP-Link"];
 
 export default function Hero() {
   return (
@@ -41,9 +32,9 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pt-32 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
         {/* Left: Copy */}
         <motion.div
-          initial={{ opacity: 0, y: 28 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
           {/* Eyebrow — SectionBadge */}
           <div className="mb-7">
@@ -66,7 +57,7 @@ export default function Hero() {
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Future Technologies delivers enterprise-grade IT solutions to
-            businesses and individuals across Mindanao — from workstations and
+            businesses and individuals across Mindanao, from workstations and
             servers to advanced security systems and full network deployments.
           </p>
 
@@ -102,124 +93,81 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Right: IT Dashboard mockup */}
+        {/* Right: Client showcase */}
         <motion.div
-          initial={{ opacity: 0, x: 28 }}
+          initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.65, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           className="hidden lg:block relative"
         >
-          <div className="relative w-full rounded-xl overflow-hidden border border-gray-200 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-[0_24px_80px_rgba(0,0,0,0.07)] overflow-hidden">
 
-            {/* Card header */}
-            <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
-              <div className="flex items-center gap-2.5">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
-                </span>
+            {/* Header */}
+            <div className="px-8 pt-8 pb-7 border-b border-gray-100">
+              <div className="flex items-center gap-2.5 mb-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent block" />
                 <span
-                  className="text-gray-500 text-[12px] font-medium"
+                  className="text-accent text-[11px] font-bold tracking-[0.22em] uppercase"
                   style={{ fontFamily: "var(--font-inter)" }}
                 >
-                  Infrastructure Overview
+                  Clients Include
                 </span>
               </div>
-              <span
-                className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase"
+              <p
+                className="text-gray-400 text-[13px] leading-relaxed max-w-xs"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
-                ● Live
-              </span>
+                Trusted by government agencies, institutions, and businesses
+                across Mindanao.
+              </p>
             </div>
 
-            {/* Status rows */}
-            <div className="px-5 py-5 space-y-3.5">
-              {statusItems.map((item, i) => (
+            {/* Client rows */}
+            <div>
+              {clientCards.map((client, i) => (
                 <motion.div
-                  key={item.label}
-                  initial={{ opacity: 0, x: 10 }}
+                  key={client.name}
+                  initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.5 + i * 0.08, duration: 0.4 }}
-                  className="flex items-center gap-3"
+                  transition={{ delay: 0.25 + i * 0.07, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                  className="flex items-center justify-between px-8 py-6 border-b border-gray-100 last:border-0 hover:bg-gray-50/60 transition-colors duration-200"
                 >
-                  <div className={`w-1.5 h-1.5 rounded-full shrink-0 ${item.color}`} />
                   <span
-                    className="text-gray-400 text-[12px] w-20 shrink-0"
-                    style={{ fontFamily: "var(--font-inter)" }}
-                  >
-                    {item.label}
-                  </span>
-                  <div className="flex-1 h-1 bg-gray-100 rounded-full overflow-hidden">
-                    <motion.div
-                      className={`h-full ${item.color} rounded-full`}
-                      initial={{ width: "0%" }}
-                      animate={{ width: item.pct }}
-                      transition={{ delay: 0.7 + i * 0.08, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                    />
-                  </div>
-                  <span
-                    className="text-gray-500 text-[11px] w-16 text-right shrink-0"
-                    style={{ fontFamily: "var(--font-inter)" }}
-                  >
-                    {item.status}
-                  </span>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Divider */}
-            <div className="mx-5 h-px bg-gray-100" />
-
-            {/* Metric cards */}
-            <div className="px-5 py-5 grid grid-cols-3 gap-3">
-              {metrics.map((m, i) => (
-                <motion.div
-                  key={m.label}
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.85 + i * 0.07, duration: 0.4 }}
-                  className="bg-gray-50 border border-gray-200 rounded-lg p-3"
-                >
-                  <div
-                    className="text-gray-900 text-xl font-extrabold leading-none"
+                    className="text-gray-900 font-extrabold text-[22px] leading-none"
                     style={{ fontFamily: "var(--font-nunito)" }}
                   >
-                    {m.value}
-                  </div>
-                  <div
-                    className="text-gray-400 text-[10px] mt-1.5"
+                    {client.name}
+                  </span>
+                  <span
+                    className="shrink-0 ml-6 text-accent text-[10px] font-bold tracking-[0.15em] uppercase bg-accent/6 border border-accent/15 px-2.5 py-1.5 rounded-[3px]"
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
-                    {m.label}
-                  </div>
+                    {client.sector}
+                  </span>
                 </motion.div>
               ))}
             </div>
 
-            {/* Divider */}
-            <div className="mx-5 h-px bg-gray-100" />
+            {/* Footer */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.4 }}
+              className="px-8 py-5 bg-gray-50 border-t border-gray-100 flex items-center gap-2.5"
+            >
+              <span className="w-1 h-1 rounded-full bg-gray-300 shrink-0 block" />
+              <span
+                className="text-gray-400 text-[12px]"
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                ...and 500+ organizations served across Surigao del Sur &amp; Mindanao
+              </span>
+            </motion.div>
 
-            {/* Tech brand tags */}
-            <div className="px-5 py-4 flex flex-wrap gap-2">
-              {techTags.map((tag, i) => (
-                <motion.span
-                  key={tag}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.05 + i * 0.05 }}
-                  className="flex items-center gap-1.5 px-2.5 py-1 bg-accent/6 border border-accent/12 rounded text-accent/80 text-[10px] font-semibold tracking-wide"
-                  style={{ fontFamily: "var(--font-inter)" }}
-                >
-                  <RiCheckboxCircleLine size={10} />
-                  {tag}
-                </motion.span>
-              ))}
-            </div>
           </div>
 
-          {/* Decorative offset border */}
-          <div className="absolute -bottom-3 -right-3 w-32 h-32 border border-accent/15 rounded-lg -z-10" />
+          {/* Decorative accent corner */}
+          <div className="absolute -bottom-3 -right-3 w-28 h-28 border border-accent/15 rounded-xl -z-10" />
         </motion.div>
       </div>
 
@@ -227,7 +175,7 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.1 }}
+        transition={{ delay: 0.7 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none"
       >
         <div className="w-px h-9 bg-linear-to-b from-accent/40 to-transparent" />

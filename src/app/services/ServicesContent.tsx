@@ -19,7 +19,7 @@ const services = [
     icon: RiComputerLine,
     title: "Workstations & PCs",
     description:
-      "From entry-level desktops to high-performance workstations, we supply, assemble, and configure systems optimized for your specific workload — whether design, engineering, data processing, or general business use.",
+      "From entry-level desktops to high-performance workstations, we supply, assemble, and configure systems optimized for your specific workload, whether design, engineering, data processing, or general business use.",
     features: [
       "Custom PC assembly & branded units",
       "Processor, RAM, and storage upgrades",
@@ -31,7 +31,7 @@ const services = [
     icon: RiServerLine,
     title: "Server Solutions",
     description:
-      "We design and deploy server environments that give your business the reliability and scalability it needs — from small NAS setups to full rack-mounted enterprise configurations.",
+      "We design and deploy server environments that give your business the reliability and scalability it needs, from small NAS setups to full rack-mounted enterprise configurations.",
     features: [
       "NAS, tower, and rack-mounted servers",
       "RAID storage configuration",
@@ -55,7 +55,7 @@ const services = [
     icon: RiWifiLine,
     title: "Network Infrastructure",
     description:
-      "Reliable, secure, and high-performance network solutions — structured cabling, enterprise Wi-Fi, VLANs, and firewall configuration for any scale of deployment.",
+      "Reliable, secure, and high-performance network solutions, structured cabling, enterprise Wi-Fi, VLANs, and firewall configuration for any scale of deployment.",
     features: [
       "Structured cabling and patch panels",
       "Managed switches and routers",
@@ -67,7 +67,7 @@ const services = [
     icon: RiSmartphoneLine,
     title: "Gadgets & Peripherals",
     description:
-      "We carry a curated selection of laptops, tablets, printers, UPS systems, and accessories from trusted brands — with competitive pricing and after-sales assurance.",
+      "We carry a curated selection of laptops, tablets, printers, UPS systems, and accessories from trusted brands, with competitive pricing and after-sales assurance.",
     features: [
       "Laptops and tablets (major brands)",
       "Inkjet, laser, and label printers",

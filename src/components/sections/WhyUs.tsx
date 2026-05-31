@@ -58,7 +58,7 @@ export default function WhyUs() {
             className="text-slate-500 text-base leading-relaxed mt-4"
             style={{ fontFamily: "var(--font-inter)" }}
           >
-            We don&apos;t just sell products — we build long-term technology
+            We don&apos;t just sell products, we build long-term technology
             partnerships.
           </p>
         </div>
