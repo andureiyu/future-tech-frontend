@@ -20,7 +20,7 @@ const nunito = Nunito({
 export const metadata: Metadata = {
   title: "Future Technologies | IT Solutions in Mindanao",
   description:
-    "Future Technologies delivers enterprise-grade IT solutions — workstations, servers, gadgets, security systems, and networking — to businesses in Tandag, Surigao del Sur and across Mindanao.",
+    "Future Technologies delivers enterprise-grade IT solutions including workstations, servers, gadgets, security systems, and networking, for businesses in Tandag, Surigao del Sur and across Mindanao.",
 };
 
 export default function RootLayout({

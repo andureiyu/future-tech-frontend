@@ -75,7 +75,7 @@ export default function CookieBanner() {
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
                     We use essential cookies to keep the site running smoothly.
-                    No tracking, no third-party ads — just a better experience
+                    No tracking, no third-party ads, just a better experience
                     for you.
                   </p>
                 </div>

@@ -14,12 +14,12 @@ const faqs = [
   {
     question: "Do you offer on-site installation and setup?",
     answer:
-      "Yes. Our technicians handle full on-site delivery, installation, and configuration for all products and systems — including workstations, servers, CCTV, and network infrastructure. We also provide training for your staff where needed.",
+      "Yes. Our technicians handle full on-site delivery, installation, and configuration for all products and systems, including workstations, servers, CCTV, and network infrastructure. We also provide training for your staff where needed.",
   },
   {
     question: "Can you build a custom PC or workstation to my specifications?",
     answer:
-      "Absolutely. We assemble custom desktops and workstations based on your workload requirements — whether for design, engineering, gaming, or business use. We source certified components and back every build with warranty and after-sales support.",
+      "Absolutely. We assemble custom desktops and workstations based on your workload requirements, whether for design, engineering, gaming, or business use. We source certified components and back every build with warranty and after-sales support.",
   },
   {
     question: "Do you carry products from major brands?",
@@ -34,7 +34,7 @@ const faqs = [
   {
     question: "Can you handle network deployments for large offices or institutions?",
     answer:
-      "Yes. We design and deploy enterprise-grade network infrastructure for offices, schools, government agencies, and commercial buildings — including structured cabling, managed switches, enterprise Wi-Fi, VLANs, and firewall configuration.",
+      "Yes. We design and deploy enterprise-grade network infrastructure for offices, schools, government agencies, and commercial buildings, including structured cabling, managed switches, enterprise Wi-Fi, VLANs, and firewall configuration.",
   },
   {
     question: "How do I request a quote or consultation?",
@@ -85,7 +85,7 @@ export default function FAQ() {
                 key={index}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.45, delay: index * 0.06 }}
               >
                 <div

@@ -91,7 +91,7 @@ export default function ContactContent() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5 }}
             >
               {submitted ? (
@@ -116,7 +116,7 @@ export default function ContactContent() {
                     className="text-gray-400 text-xs mt-4"
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
-                    Note: Backend integration pending — form submissions will be
+                    Note: Backend integration pending, form submissions will be
                     handled via NestJS + Supabase.
                   </p>
                 </div>
@@ -257,7 +257,7 @@ export default function ContactContent() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="space-y-4"
             >
@@ -306,7 +306,7 @@ export default function ContactContent() {
                       className="text-accent text-sm hover:text-accent-hover transition-colors"
                       style={{ fontFamily: "var(--font-inter)" }}
                     >
-                      Future Technologies — Tandag
+                      Future Technologies, Tandag
                     </a>
                     <p
                       className="text-gray-400 text-xs mt-1"

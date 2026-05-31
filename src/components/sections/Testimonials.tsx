@@ -15,7 +15,7 @@ const testimonials = [
     name: "Ma. Clara Santos",
     role: "IT Head · Municipal Government Office",
     content:
-      "We've relied on them for server procurement and maintenance for years. Their depth of knowledge in enterprise systems is impressive — and response times are unmatched locally.",
+      "We've relied on them for server procurement and maintenance for years. Their depth of knowledge in enterprise systems is impressive, and response times are unmatched locally.",
     initials: "CS",
   },
   {

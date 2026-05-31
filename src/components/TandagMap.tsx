@@ -23,6 +23,8 @@ export default function TandagMap() {
   useEffect(() => {
     if (mapRef.current || !containerRef.current) return;
 
+    let sizeTimer: ReturnType<typeof setTimeout> | null = null;
+
     import("leaflet").then((L) => {
       if (!containerRef.current || mapRef.current) return;
 
@@ -68,12 +70,18 @@ export default function TandagMap() {
         )
         .openPopup();
 
-      // Recalculate size after the container finishes layout
-      // (fixes off-center rendering when map initialises before CSS paint)
-      setTimeout(() => map.invalidateSize(), 150);
+      // Recalculate size after container finishes layout.
+      // Guard via mapRef so this is a no-op if cleanup already ran.
+      sizeTimer = setTimeout(() => {
+        if (mapRef.current) {
+          // @ts-expect-error – Leaflet map instance
+          mapRef.current.invalidateSize();
+        }
+      }, 150);
     });
 
     return () => {
+      if (sizeTimer !== null) clearTimeout(sizeTimer);
       if (mapRef.current) {
         // @ts-expect-error – Leaflet map instance
         mapRef.current.remove();

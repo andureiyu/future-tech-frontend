@@ -110,7 +110,7 @@ export default function AboutTeaser() {
               Founded with a mission to make quality technology accessible,
               Future Technologies has grown to become the go-to IT provider for
               organizations throughout Surigao del Sur and neighboring
-              provinces — delivering solutions that are built to last.
+              provinces, delivering solutions that are built to last.
             </p>
 
             <ul className="space-y-3.5 mb-10">
