@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import {
@@ -75,7 +76,7 @@ export default function PortfolioContent() {
   return (
     <div className="bg-bg-primary">
       {/* Page hero */}
-      <section className="relative bg-bg-secondary pt-36 pb-24 overflow-hidden">
+      <section className="relative bg-bg-secondary pt-[180px] pb-24 overflow-hidden">
         <div
           className="absolute inset-0"
           style={{
@@ -84,6 +85,22 @@ export default function PortfolioContent() {
           }}
         />
         <div className="absolute bottom-0 left-0 w-100 h-75 bg-accent/4 rounded-full blur-[100px] pointer-events-none" />
+
+        {/* Logo watermark */}
+        <div
+          className="hidden md:block absolute bottom-0 right-0 pointer-events-none select-none"
+          aria-hidden="true"
+          style={{ width: "480px", height: "480px" }}
+        >
+          <Image
+            src="/assets/images/logobetter.jpg"
+            alt=""
+            width={480}
+            height={480}
+            className="w-full h-full object-contain opacity-[0.05] grayscale"
+          />
+        </div>
+
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
           <div className="flex items-center gap-3 mb-5 justify-center md:justify-start">
             <div className="hidden md:block w-7 h-px bg-accent" />

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { RiMenuLine, RiCloseLine } from "react-icons/ri";
+import TickerBar from "@/components/TickerBar";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -36,6 +37,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
+      <TickerBar />
       <nav className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between py-5">
 
