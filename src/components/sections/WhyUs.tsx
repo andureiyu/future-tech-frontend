@@ -47,7 +47,7 @@ export default function WhyUs() {
             <SectionBadge>Why Choose Us</SectionBadge>
           </div>
           <h2
-            className="text-[38px] font-extrabold text-white tracking-tight leading-tight"
+            className="text-[38px] font-extrabold text-gray-900 tracking-tight leading-tight"
             style={{ fontFamily: "var(--font-nunito)" }}
           >
             The Future Technologies
@@ -55,7 +55,7 @@ export default function WhyUs() {
             Difference
           </h2>
           <p
-            className="text-white/40 text-base leading-relaxed mt-4"
+            className="text-slate-500 text-base leading-relaxed mt-4"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             We don&apos;t just sell products — we build long-term technology
@@ -72,18 +72,18 @@ export default function WhyUs() {
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.45, delay: i * 0.1 }}
             >
-              <GlowCard className="bg-bg-secondary border border-border-subtle/40 rounded-lg p-7 hover:border-accent/25 transition-colors duration-300 group h-full">
+              <GlowCard className="bg-white border border-border-subtle rounded-lg p-7 hover:border-accent/25 transition-colors duration-300 group h-full shadow-sm">
                 <div className="w-11 h-11 bg-accent/10 rounded-lg flex items-center justify-center mb-5 group-hover:bg-accent/18 transition-colors">
                   <reason.icon className="text-accent" size={21} />
                 </div>
                 <h3
-                  className="text-[15px] font-bold text-white mb-3"
+                  className="text-[15px] font-bold text-gray-900 mb-3"
                   style={{ fontFamily: "var(--font-nunito)" }}
                 >
                   {reason.title}
                 </h3>
                 <p
-                  className="text-white/38 text-sm leading-relaxed"
+                  className="text-slate-500 text-sm leading-relaxed"
                   style={{ fontFamily: "var(--font-inter)" }}
                 >
                   {reason.description}

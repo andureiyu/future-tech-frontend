@@ -50,8 +50,8 @@ export default function CookieBanner() {
             className="fixed bottom-5 left-1/2 -translate-x-1/2 z-999 w-[calc(100%-2rem)] max-w-2xl"
           >
             <div
-              className="relative rounded-xl border border-white/8 shadow-[0_24px_64px_rgba(0,0,0,0.55)] overflow-hidden"
-              style={{ background: "rgba(35,35,35,0.97)" }}
+              className="relative rounded-xl border border-gray-200 shadow-[0_24px_64px_rgba(0,0,0,0.12)] overflow-hidden"
+              style={{ background: "rgba(255,255,255,0.98)" }}
             >
               {/* Accent top line */}
               <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-accent to-transparent opacity-70" />
@@ -65,13 +65,13 @@ export default function CookieBanner() {
                 {/* Text */}
                 <div className="flex-1 min-w-0">
                   <p
-                    className="text-white text-[13.5px] font-semibold mb-1"
+                    className="text-gray-900 text-[13.5px] font-semibold mb-1"
                     style={{ fontFamily: "var(--font-nunito)" }}
                   >
                     We use cookies
                   </p>
                   <p
-                    className="text-white/38 text-[12px] leading-relaxed"
+                    className="text-slate-500 text-[12px] leading-relaxed"
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
                     We use essential cookies to keep the site running smoothly.
@@ -84,14 +84,14 @@ export default function CookieBanner() {
                 <div className="flex items-center gap-2.5 shrink-0 w-full sm:w-auto">
                   <button
                     onClick={decline}
-                    className="flex-1 sm:flex-none px-4 py-2 text-[12px] font-medium text-white/40 hover:text-white/70 border border-white/8 hover:border-white/15 rounded-md transition-all duration-200"
+                    className="flex-1 sm:flex-none px-4 py-2 text-[12px] font-medium text-gray-500 hover:text-gray-700 border border-gray-200 hover:border-gray-300 rounded-md transition-all duration-200"
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
                     Decline
                   </button>
                   <button
                     onClick={accept}
-                    className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-5 py-2 bg-accent hover:bg-accent-hover text-[#1a1a1a] text-[12px] font-bold rounded-md transition-colors duration-200"
+                    className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-5 py-2 bg-accent hover:bg-accent-hover text-white text-[12px] font-bold rounded-md transition-colors duration-200"
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
                     <RiShieldCheckLine size={14} />
@@ -102,7 +102,7 @@ export default function CookieBanner() {
                 {/* Close */}
                 <button
                   onClick={decline}
-                  className="absolute top-3.5 right-3.5 text-white/20 hover:text-white/50 transition-colors"
+                  className="absolute top-3.5 right-3.5 text-gray-300 hover:text-gray-500 transition-colors"
                   aria-label="Dismiss"
                 >
                   <RiCloseLine size={16} />

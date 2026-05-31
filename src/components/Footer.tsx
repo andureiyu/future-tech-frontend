@@ -26,7 +26,7 @@ const services = [
 
 export default function Footer() {
   return (
-    <footer className="bg-bg-dark border-t border-border-subtle/40">
+    <footer className="bg-bg-dark border-t border-border-subtle">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Brand column */}
@@ -42,17 +42,17 @@ export default function Footer() {
                     className="object-contain w-full h-full"
                   />
                 </div>
-                <div className="absolute inset-0 rounded-full ring-1 ring-white/15 pointer-events-none" />
+                <div className="absolute inset-0 rounded-full ring-1 ring-gray-200 pointer-events-none" />
               </div>
               <span
-                className="text-white font-semibold text-sm"
+                className="text-gray-700 font-semibold text-sm"
                 style={{ fontFamily: "var(--font-nunito)" }}
               >
                 Future Technologies
               </span>
             </Link>
             <p
-              className="text-white/35 text-sm leading-relaxed mb-6"
+              className="text-gray-500 text-sm leading-relaxed mb-6"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Your trusted IT solutions partner in Tandag, Surigao del Sur.
@@ -63,7 +63,7 @@ export default function Footer() {
               href="https://www.facebook.com/profile.php?id=100083088619270"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-white/35 hover:text-accent transition-colors text-sm group"
+              className="inline-flex items-center gap-2 text-gray-500 hover:text-accent transition-colors text-sm group"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               <RiFacebookBoxFill size={17} />
@@ -78,7 +78,7 @@ export default function Footer() {
           {/* Navigation */}
           <div>
             <h4
-              className="text-white text-[11px] font-bold mb-5 uppercase tracking-[0.15em]"
+              className="text-gray-900 text-[11px] font-bold mb-5 uppercase tracking-[0.15em]"
               style={{ fontFamily: "var(--font-nunito)" }}
             >
               Navigation
@@ -88,7 +88,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/35 hover:text-white text-sm transition-colors"
+                    className="text-gray-500 hover:text-gray-900 text-sm transition-colors"
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
                     {link.label}
@@ -101,7 +101,7 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4
-              className="text-white text-[11px] font-bold mb-5 uppercase tracking-[0.15em]"
+              className="text-gray-900 text-[11px] font-bold mb-5 uppercase tracking-[0.15em]"
               style={{ fontFamily: "var(--font-nunito)" }}
             >
               Services
@@ -111,7 +111,7 @@ export default function Footer() {
                 <li key={s.label}>
                   <Link
                     href="/services"
-                    className="text-white/35 hover:text-white text-sm transition-colors"
+                    className="text-gray-500 hover:text-gray-900 text-sm transition-colors"
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
                     {s.label}
@@ -124,7 +124,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4
-              className="text-white text-[11px] font-bold mb-5 uppercase tracking-[0.15em]"
+              className="text-gray-900 text-[11px] font-bold mb-5 uppercase tracking-[0.15em]"
               style={{ fontFamily: "var(--font-nunito)" }}
             >
               Contact
@@ -136,7 +136,7 @@ export default function Footer() {
                   size={15}
                 />
                 <span
-                  className="text-white/35 text-sm leading-relaxed"
+                  className="text-gray-500 text-sm leading-relaxed"
                   style={{ fontFamily: "var(--font-inter)" }}
                 >
                   Tandag City, Surigao del Sur
@@ -150,7 +150,7 @@ export default function Footer() {
                   href="https://www.facebook.com/profile.php?id=100083088619270"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/35 hover:text-accent text-sm transition-colors"
+                  className="text-gray-500 hover:text-accent text-sm transition-colors"
                   style={{ fontFamily: "var(--font-inter)" }}
                 >
                   Inquire via Facebook
@@ -160,7 +160,7 @@ export default function Footer() {
                 <RiMailLine className="text-accent shrink-0" size={15} />
                 <Link
                   href="/contact"
-                  className="text-white/35 hover:text-accent text-sm transition-colors"
+                  className="text-gray-500 hover:text-accent text-sm transition-colors"
                   style={{ fontFamily: "var(--font-inter)" }}
                 >
                   Send an Inquiry
@@ -171,16 +171,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-14 pt-6 border-t border-border-subtle/30 flex flex-col md:flex-row items-center justify-between gap-3">
+        <div className="mt-14 pt-6 border-t border-border-subtle flex flex-col md:flex-row items-center justify-between gap-3">
           <p
-            className="text-white/20 text-xs"
+            className="text-gray-400 text-xs"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             © {new Date().getFullYear()} Future Technologies. All rights
             reserved.
           </p>
           <p
-            className="text-white/20 text-xs"
+            className="text-gray-400 text-xs"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Tandag, Surigao del Sur · Philippines

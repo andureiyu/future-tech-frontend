@@ -44,7 +44,7 @@ export default function Testimonials() {
             <div className="w-7 h-px bg-accent" />
           </div>
           <h2
-            className="text-[38px] font-extrabold text-white tracking-tight leading-tight"
+            className="text-[38px] font-extrabold text-gray-900 tracking-tight leading-tight"
             style={{ fontFamily: "var(--font-nunito)" }}
           >
             What Our Clients Say
@@ -59,7 +59,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.45, delay: i * 0.11 }}
-              className="bg-bg-primary border border-border-subtle/40 rounded-lg p-7 relative flex flex-col"
+              className="bg-bg-primary border border-border-subtle rounded-lg p-7 relative flex flex-col shadow-sm"
             >
               {/* Quote icon */}
               <RiDoubleQuotesL
@@ -75,13 +75,13 @@ export default function Testimonials() {
               </div>
 
               <p
-                className="text-white/50 text-sm leading-relaxed flex-1 mb-6"
+                className="text-slate-500 text-sm leading-relaxed flex-1 mb-6"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 &ldquo;{t.content}&rdquo;
               </p>
 
-              <div className="flex items-center gap-3 pt-4 border-t border-border-subtle/30">
+              <div className="flex items-center gap-3 pt-4 border-t border-border-subtle">
                 <div className="w-9 h-9 bg-accent/15 rounded-full flex items-center justify-center shrink-0">
                   <span
                     className="text-accent text-[11px] font-bold"
@@ -92,13 +92,13 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <div
-                    className="text-white text-[13px] font-semibold"
+                    className="text-gray-900 text-[13px] font-semibold"
                     style={{ fontFamily: "var(--font-nunito)" }}
                   >
                     {t.name}
                   </div>
                   <div
-                    className="text-white/30 text-[11px] mt-0.5"
+                    className="text-gray-400 text-[11px] mt-0.5"
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
                     {t.role}

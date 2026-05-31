@@ -2,17 +2,17 @@
 
 import { useEffect, useRef } from "react";
 
-// Tandag City urban center (coastal area where OSM places the city label)
-const TANDAG_LAT = 9.0783;
-const TANDAG_LNG = 126.155;
+// Future Technologies office location — Rosario, Tandag City
+const TANDAG_LAT = 9.0767;
+const TANDAG_LNG = 126.1526;
 const ZOOM = 14;
 
 // SVG pin — tip is exactly at the bottom-center (14, 36), no CSS rotation needed
 const PIN_SVG = `
   <svg width="28" height="36" viewBox="0 0 28 36" xmlns="http://www.w3.org/2000/svg">
     <path d="M14 0C6.268 0 0 6.268 0 14c0 9.333 14 22 14 22s14-12.667 14-22C28 6.268 21.732 0 14 0z"
-      fill="#ffbc00" stroke="white" stroke-width="2.5"/>
-    <circle cx="14" cy="14" r="5" fill="#1a1a1a"/>
+      fill="#16a34a" stroke="white" stroke-width="2.5"/>
+    <circle cx="14" cy="14" r="5" fill="white"/>
   </svg>
 `;
 
@@ -61,8 +61,8 @@ export default function TandagMap() {
       marker
         .bindPopup(
           `<div style="font-family:sans-serif;font-size:12px;font-weight:600;color:#1a1a1a;line-height:1.5;padding:1px 2px;">
-            Tandag City
-            <br/><span style="font-weight:400;color:#555;font-size:11px;">Surigao del Sur</span>
+            Future Technologies
+            <br/><span style="font-weight:400;color:#555;font-size:11px;">Tandag City, Surigao del Sur</span>
           </div>`,
           { offset: [0, -4], closeButton: false }
         )

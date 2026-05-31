@@ -63,7 +63,7 @@ export default function Services() {
             <SectionBadge>What We Offer</SectionBadge>
           </div>
           <h2
-            className="text-[38px] font-extrabold text-white tracking-tight mb-4 leading-tight"
+            className="text-[38px] font-extrabold text-gray-900 tracking-tight mb-4 leading-tight"
             style={{ fontFamily: "var(--font-nunito)" }}
           >
             Complete IT Solutions
@@ -71,7 +71,7 @@ export default function Services() {
             for Every Need
           </h2>
           <p
-            className="text-white/45 text-base leading-relaxed"
+            className="text-slate-500 text-base leading-relaxed"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             From hardware procurement to full network deployment, we cover all
@@ -80,7 +80,7 @@ export default function Services() {
         </div>
 
         {/* Services grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border-subtle/20 border border-border-subtle/20 rounded-lg overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border-subtle/20 border border-border-subtle rounded-lg overflow-hidden">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
@@ -89,18 +89,18 @@ export default function Services() {
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.45, delay: i * 0.07 }}
             >
-              <GlowCard className="bg-bg-primary p-8 group hover:bg-[#3d3d3d] transition-colors duration-300 cursor-default h-full">
+              <GlowCard className="bg-bg-primary p-8 group hover:bg-gray-50 transition-colors duration-300 cursor-default h-full">
                 <div className="w-10 h-10 bg-accent/10 rounded-[3px] flex items-center justify-center mb-5 group-hover:bg-accent/18 transition-colors">
                   <service.icon className="text-accent" size={19} />
                 </div>
                 <h3
-                  className="text-[17px] font-bold text-white mb-3"
+                  className="text-[17px] font-bold text-gray-900 mb-3"
                   style={{ fontFamily: "var(--font-nunito)" }}
                 >
                   {service.title}
                 </h3>
                 <p
-                  className="text-white/40 text-sm leading-relaxed"
+                  className="text-slate-500 text-sm leading-relaxed"
                   style={{ fontFamily: "var(--font-inter)" }}
                 >
                   {service.description}

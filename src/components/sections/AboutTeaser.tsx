@@ -44,7 +44,7 @@ export default function AboutTeaser() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <div className="relative aspect-4/3 rounded-lg overflow-hidden border border-white/6">
+            <div className="relative aspect-4/3 rounded-lg overflow-hidden border border-gray-200">
               <AnimatePresence mode="sync">
                 <motion.div
                   key={current}
@@ -95,7 +95,7 @@ export default function AboutTeaser() {
             </div>
 
             <h2
-              className="text-[38px] font-extrabold text-white tracking-tight mb-5 leading-tight"
+              className="text-[38px] font-extrabold text-gray-900 tracking-tight mb-5 leading-tight"
               style={{ fontFamily: "var(--font-nunito)" }}
             >
               Mindanao&apos;s Trusted
@@ -104,7 +104,7 @@ export default function AboutTeaser() {
             </h2>
 
             <p
-              className="text-white/48 text-base leading-relaxed mb-8"
+              className="text-slate-500 text-base leading-relaxed mb-8"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Founded with a mission to make quality technology accessible,
@@ -120,7 +120,7 @@ export default function AboutTeaser() {
                     <RiCheckLine className="text-accent" size={11} />
                   </div>
                   <span
-                    className="text-white/50 text-sm leading-relaxed"
+                    className="text-slate-500 text-sm leading-relaxed"
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
                     {item}
@@ -131,7 +131,7 @@ export default function AboutTeaser() {
 
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-accent text-[#1a1a1a] font-bold text-sm rounded-sm hover:bg-accent-hover transition-all duration-200 hover:gap-3"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-accent text-white font-bold text-sm rounded-sm hover:bg-accent-hover transition-all duration-200 hover:gap-3"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Learn Our Story

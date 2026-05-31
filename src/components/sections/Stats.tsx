@@ -5,15 +5,15 @@ import { RiTrophyLine, RiGroupLine, RiComputerLine, RiTimeLine } from "react-ico
 import { NumberTicker } from "@/components/ui/number-ticker";
 
 const stats = [
-  { icon: RiTrophyLine, value: 10, suffix: "+", label: "Years in Business" },
-  { icon: RiGroupLine, value: 500, suffix: "+", label: "Clients Served" },
+  { icon: RiTrophyLine, value: 7, suffix: "+", label: "Years in Business" },
+  { icon: RiGroupLine, value: 500, suffix: "+", label: "Clients Served", subLabel: "DMSF · BARMM · Royal Mandaya" },
   { icon: RiComputerLine, value: 1000, suffix: "+", label: "Projects Completed" },
-  { icon: RiTimeLine, value: null, display: "24/7", label: "Technical Support" },
+  { icon: RiTimeLine, value: null, display: "Serves", label: "Technical Support" },
 ];
 
 export default function Stats() {
   return (
-    <section className="bg-[#262626] border-y border-border-subtle/30 py-12">
+    <section className="bg-bg-primary border-y border-border-subtle py-12">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
           {stats.map((stat, i) => (
@@ -30,7 +30,7 @@ export default function Stats() {
               </div>
               <div>
                 <div
-                  className="text-2xl font-extrabold text-white leading-none"
+                  className="text-2xl font-extrabold text-gray-900 leading-none"
                   style={{ fontFamily: "var(--font-nunito)" }}
                 >
                   {stat.value !== null ? (
@@ -40,11 +40,19 @@ export default function Stats() {
                   )}
                 </div>
                 <div
-                  className="text-white/35 text-xs mt-1"
+                  className="text-gray-500 text-xs mt-1"
                   style={{ fontFamily: "var(--font-inter)" }}
                 >
                   {stat.label}
                 </div>
+                {"subLabel" in stat && stat.subLabel && (
+                  <div
+                    className="text-accent/70 text-[10px] mt-0.5 font-medium"
+                    style={{ fontFamily: "var(--font-inter)" }}
+                  >
+                    {stat.subLabel}
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
