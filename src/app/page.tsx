@@ -1,5 +1,5 @@
 import Hero from "@/components/sections/Hero";
-import Stats from "@/components/sections/Stats";
+import TabletStats from "@/components/sections/TabletStats";
 import Services from "@/components/sections/Services";
 import AboutTeaser from "@/components/sections/AboutTeaser";
 import WhyUs from "@/components/sections/WhyUs";
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Stats />
+      <TabletStats />
       <Services />
       <AboutTeaser />
       <WhyUs />

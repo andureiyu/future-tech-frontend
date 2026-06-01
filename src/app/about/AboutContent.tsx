@@ -1,8 +1,17 @@
 "use client";
 
+import type React from "react";
+import { useId } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { RiCheckLine, RiEyeLine, RiFocusLine, RiMapPinLine } from "react-icons/ri";
+import {
+  RiCheckLine,
+  RiMapPinLine,
+  RiShieldCheckLine,
+  RiTrophyLine,
+  RiGroupLine,
+  RiLightbulbFlashLine,
+} from "react-icons/ri";
 import dynamic from "next/dynamic";
 
 const TandagMap = dynamic(() => import("@/components/TandagMap"), {
@@ -14,24 +23,32 @@ const TandagMap = dynamic(() => import("@/components/TandagMap"), {
 
 const values = [
   {
+    icon: RiShieldCheckLine,
     title: "Integrity",
     description:
       "We are transparent in our pricing, honest in our assessments, and accountable for every project we take on.",
+    pattern: [[8, 2], [10, 4], [7, 1], [9, 5], [8, 3]] as number[][],
   },
   {
+    icon: RiTrophyLine,
     title: "Excellence",
     description:
       "We refuse to cut corners. Every installation, deployment, and support call is handled with professional precision.",
+    pattern: [[10, 3], [7, 6], [9, 1], [8, 4], [10, 2]] as number[][],
   },
   {
+    icon: RiGroupLine,
     title: "Community",
     description:
       "As a local business, we're invested in the growth of Surigao del Sur. When local businesses thrive, we all thrive.",
+    pattern: [[7, 5], [9, 2], [8, 6], [10, 1], [7, 3]] as number[][],
   },
   {
+    icon: RiLightbulbFlashLine,
     title: "Innovation",
     description:
       "We stay ahead of technological trends so we can recommend solutions that are not just current, but future-proof.",
+    pattern: [[9, 4], [7, 2], [10, 5], [8, 1], [9, 6]] as number[][],
   },
 ];
 
@@ -58,6 +75,54 @@ const fadeUp = {
     transition: { duration: 0.5, delay: i * 0.1 },
   }),
 };
+
+function GridPattern({
+  width,
+  height,
+  x,
+  y,
+  squares,
+  ...props
+}: React.SVGProps<SVGSVGElement> & {
+  width: number;
+  height: number;
+  x: string;
+  y: string;
+  squares?: number[][];
+}) {
+  const patternId = useId();
+  return (
+    <svg aria-hidden="true" {...props}>
+      <defs>
+        <pattern
+          id={patternId}
+          width={width}
+          height={height}
+          patternUnits="userSpaceOnUse"
+          x={x}
+          y={y}
+        >
+          <path d={`M.5 ${height}V.5H${width}`} fill="none" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" strokeWidth={0} fill={`url(#${patternId})`} />
+      {squares && (
+        <svg x={x} y={y} className="overflow-visible">
+          {squares.map(([sx, sy], index) => (
+            <rect
+              strokeWidth="0"
+              key={index}
+              width={width + 1}
+              height={height + 1}
+              x={sx * width}
+              y={sy * height}
+            />
+          ))}
+        </svg>
+      )}
+    </svg>
+  );
+}
 
 export default function AboutContent() {
   return (
@@ -176,65 +241,6 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-20 bg-bg-secondary">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5 }}
-              className="bg-bg-primary border border-border-subtle rounded-lg p-8 shadow-sm"
-            >
-              <div className="w-11 h-11 bg-accent/10 rounded-lg flex items-center justify-center mb-5">
-                <RiFocusLine className="text-accent" size={22} />
-              </div>
-              <h3
-                className="text-xl font-extrabold text-gray-900 mb-4"
-                style={{ fontFamily: "var(--font-nunito)" }}
-              >
-                Our Mission
-              </h3>
-              <p
-                className="text-slate-500 text-base leading-relaxed"
-                style={{ fontFamily: "var(--font-inter)" }}
-              >
-                To empower organizations in Mindanao with reliable, scalable, and
-                cost-effective IT solutions, delivered with integrity, expertise,
-                and genuine commitment to long-term client success.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-bg-primary border border-border-subtle rounded-lg p-8 shadow-sm"
-            >
-              <div className="w-11 h-11 bg-accent/10 rounded-lg flex items-center justify-center mb-5">
-                <RiEyeLine className="text-accent" size={22} />
-              </div>
-              <h3
-                className="text-xl font-extrabold text-gray-900 mb-4"
-                style={{ fontFamily: "var(--font-nunito)" }}
-              >
-                Our Vision
-              </h3>
-              <p
-                className="text-slate-500 text-base leading-relaxed"
-                style={{ fontFamily: "var(--font-inter)" }}
-              >
-                To be Mindanao&apos;s most trusted IT solutions company, recognized
-                not just for the technology we deploy, but for the relationships
-                we build and the communities we help grow.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* Values */}
       <section className="py-24 bg-bg-primary">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -257,7 +263,7 @@ export default function AboutContent() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-border-subtle rounded-xl overflow-hidden shadow-sm">
             {values.map((value, i) => (
               <motion.div
                 key={value.title}
@@ -266,23 +272,54 @@ export default function AboutContent() {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-60px" }}
                 variants={fadeUp}
-                className="bg-white border border-border-subtle rounded-lg p-7 shadow-sm"
+                className="relative overflow-hidden p-7 bg-white border-b border-r border-border-subtle last:border-b-0 md:[&:nth-child(2)]:border-r-0 lg:[&:nth-child(2)]:border-r md:[&:nth-child(3)]:border-b-0 md:[&:nth-child(4)]:border-b-0 lg:[&:nth-child(4)]:border-r-0 group hover:bg-gray-50/60 transition-colors duration-300"
               >
-                <div className="w-7 h-7 bg-accent/12 rounded-[3px] flex items-center justify-center mb-4">
-                  <RiCheckLine className="text-accent" size={15} />
+                {/* Grid pattern overlay */}
+                <div className="pointer-events-none absolute top-0 left-1/2 -mt-2 -ml-20 h-full w-full [mask-image:linear-gradient(white,transparent)]">
+                  <div className="absolute inset-0 bg-gradient-to-r from-gray-900/5 to-gray-900/[0.01] [mask-image:radial-gradient(farthest-side_at_top,white,transparent)]">
+                    <GridPattern
+                      width={20}
+                      height={20}
+                      x="-12"
+                      y="4"
+                      squares={value.pattern}
+                      className="fill-gray-900/[0.06] stroke-gray-900/20 absolute inset-0 h-full w-full mix-blend-overlay"
+                    />
+                  </div>
                 </div>
+
+                {/* Accent glow on hover */}
+                <div className="absolute -top-8 -right-8 w-20 h-20 bg-accent/8 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                {/* Icon */}
+                <div className="relative z-10 w-10 h-10 bg-accent/10 group-hover:bg-accent/15 rounded-lg flex items-center justify-center mb-auto transition-colors duration-300">
+                  <value.icon className="text-accent" size={19} />
+                </div>
+
+                {/* Title */}
                 <h3
-                  className="text-[15px] font-bold text-gray-900 mb-3"
+                  className="relative z-10 mt-10 text-[15px] font-bold text-gray-900"
                   style={{ fontFamily: "var(--font-nunito)" }}
                 >
                   {value.title}
                 </h3>
+
+                {/* Description */}
                 <p
-                  className="text-slate-500 text-sm leading-relaxed"
+                  className="relative z-20 mt-2 text-slate-500 text-sm leading-relaxed font-light"
                   style={{ fontFamily: "var(--font-inter)" }}
                 >
                   {value.description}
                 </p>
+
+                {/* Bottom accent line */}
+                <motion.div
+                  className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-accent/50 to-transparent"
+                  initial={{ width: 0 }}
+                  whileInView={{ width: "45%" }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: i * 0.1 + 0.3, ease: [0.22, 1, 0.36, 1] }}
+                />
               </motion.div>
             ))}
           </div>

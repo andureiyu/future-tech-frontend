@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -37,13 +37,7 @@ export default function AboutTeaser() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: Image placeholder */}
-          <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="relative"
-          >
+          <div className="relative">
             <div className="relative aspect-4/3 rounded-lg overflow-hidden border border-gray-200">
               <AnimatePresence mode="sync">
                 <motion.div
@@ -81,16 +75,10 @@ export default function AboutTeaser() {
 
             {/* Offset decorative border */}
             <div className="absolute -bottom-3.5 -right-3.5 w-28 h-28 border border-accent/15 rounded-lg -z-10" />
-          </motion.div>
+          </div>
 
           {/* Right: Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.6, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-            className="text-center md:text-left"
-          >
+          <div className="text-center md:text-left">
             <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
               <SectionBadge>About Us</SectionBadge>
             </div>
@@ -140,7 +128,7 @@ export default function AboutTeaser() {
                 <RiArrowRightLine size={14} />
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

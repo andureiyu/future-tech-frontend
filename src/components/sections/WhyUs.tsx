@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
   RiShieldCheckLine,
   RiMapPinLine,
@@ -64,14 +63,8 @@ export default function WhyUs() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {reasons.map((reason, i) => (
-            <motion.div
-              key={reason.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.45, delay: i * 0.1 }}
-            >
+          {reasons.map((reason) => (
+            <div key={reason.title}>
               <GlowCard className="bg-white border border-border-subtle rounded-lg p-7 hover:border-accent/25 transition-colors duration-300 group h-full shadow-sm">
                 <div className="w-11 h-11 bg-accent/10 rounded-lg flex items-center justify-center mb-5 group-hover:bg-accent/18 transition-colors">
                   <reason.icon className="text-accent" size={21} />
@@ -89,7 +82,7 @@ export default function WhyUs() {
                   {reason.description}
                 </p>
               </GlowCard>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
