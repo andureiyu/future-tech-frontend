@@ -3,6 +3,15 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { RiArrowRightLine } from "react-icons/ri";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
+
+const ctaWords = [
+  { text: "Ready" },
+  { text: "to" },
+  { text: "Upgrade" },
+  { text: "Your" },
+  { text: "Tech?" },
+];
 
 export default function CTABanner() {
   return (
@@ -25,12 +34,10 @@ export default function CTABanner() {
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.5 }}
         >
-          <h2
-            className="text-[30px] sm:text-[42px] lg:text-[52px] font-extrabold text-white tracking-tight leading-tight mb-4"
-            style={{ fontFamily: "var(--font-nunito)" }}
-          >
-            Ready to Upgrade Your Tech?
-          </h2>
+          <TypewriterEffectSmooth
+            words={ctaWords}
+            className="justify-center mb-4"
+          />
           <p
             className="text-white/70 text-lg mb-9 max-w-md mx-auto leading-relaxed"
             style={{ fontFamily: "var(--font-inter)" }}
